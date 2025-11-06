@@ -432,9 +432,38 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
 ### Animations
 
 ```css
-.animate-pulse-neon  /* Pulsing opacity */
-.animate-glow-pulse  /* Pulsing glow */
-.animate-shimmer     /* Loading shimmer */
+.animate-pulse-neon     /* Pulsing opacity */
+.animate-glow-pulse     /* Pulsing glow */
+.animate-shimmer        /* Loading shimmer */
+.animate-glitch         /* Fast glitch effect (0.3s) */
+.animate-glitch-slow    /* Slow glitch effect (1s) */
+.animate-typewriter     /* Typewriter with blinking caret */
+.animate-shimmer-text   /* Shimmering neon text */
+```
+
+### Typography
+
+```css
+/* Heading Hierarchy */
+.h1, .h2, .h3, .h4, .h5, .h6         /* Semantic heading styles */
+.display-1, .display-2, .display-3, .display-4  /* Extra large displays */
+
+/* Text Shadows for Readability */
+.text-shadow-sm / md / lg / xl       /* Dark shadows for image overlays */
+.text-shadow-neon                    /* Combined shadow + glow */
+
+/* Mono-space Utilities */
+.mono                                /* Mono-space font */
+.code-block                          /* Code block with styling */
+.inline-code                         /* Inline code with neon accent */
+.license-text                        /* License plate style (bold, uppercase, wide) */
+
+/* Body Text Variants */
+.body-lg, .body, .body-sm            /* Body text sizes */
+
+/* Text Wrapping */
+.text-balance                        /* Balanced text wrapping */
+.text-pretty                         /* Pretty text wrapping */
 ```
 
 ### Transitions
