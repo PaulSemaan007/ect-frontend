@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import {
@@ -151,6 +152,24 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
           <Container size="lg">
             <div className="relative z-10 max-w-3xl py-20">
+              {/* Breadcrumb */}
+              <nav aria-label="Breadcrumb" className="mb-4">
+                <ol className="flex items-center gap-2 text-sm text-gray-400">
+                  <li>
+                    <Link href="/" className="hover:text-neon transition-colors">
+                      Home
+                    </Link>
+                  </li>
+                  <li aria-hidden="true">/</li>
+                  <li>
+                    <Link href="/services" className="hover:text-neon transition-colors">
+                      Services
+                    </Link>
+                  </li>
+                  <li aria-hidden="true">/</li>
+                  <li className="text-gray-200">{service.title}</li>
+                </ol>
+              </nav>
               <Heading as="h1" gradient className="mb-6">
                 {service.title}
               </Heading>
@@ -246,12 +265,44 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     Call {siteConfig.contact.phone}
                   </Button>
                 </div>
+                <Link
+                  href="/services"
+                  className="inline-block mt-6 text-gray-400 hover:text-neon transition-colors text-sm"
+                >
+                  ← Back to All Services
+                </Link>
               </div>
             </AnimateOnScroll>
           </Container>
         </Section>
       </main>
       <Footer />
+
+      {/* BreadcrumbList structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ectsecurity.com' },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Services',
+                item: 'https://ectsecurity.com/services',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: service.title,
+                item: `https://ectsecurity.com/services/${resolvedParams.service}`,
+              },
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

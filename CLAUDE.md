@@ -105,8 +105,8 @@
 ### Tier 5 — Content & UX Polish
 
 - [ ] Improve privacy/terms pages with professional legal copy
-- [ ] Add breadcrumb navigation to service detail pages
-- [ ] Add "Back to Services" link on individual service pages
+- [x] Add breadcrumb navigation to service detail pages
+- [x] Add "Back to Services" link on individual service pages
 
 ## Parked — Needs Boss Input
 
