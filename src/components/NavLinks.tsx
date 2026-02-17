@@ -16,6 +16,7 @@ export function NavLinks() {
           className={`nav-link text-gray-300 hover:text-neon font-medium transition-colors ${
             pathname === link.href ? 'active text-neon' : ''
           }`}
+          aria-current={pathname === link.href ? 'page' : undefined}
         >
           {link.label}
         </Link>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { Button } from './ui';
 import { NavLinks } from './NavLinks';
+import { MobileMenu } from './MobileMenu';
 
 export function Header() {
   return (
@@ -21,14 +22,12 @@ export function Header() {
             <NavLinks />
           </div>
 
-          {/* CTAs */}
+          {/* CTAs + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <Button href={siteConfig.ctas.secondary.href} variant="ghost" size="sm" className="hidden sm:inline-flex">
-              {siteConfig.ctas.secondary.label}
-            </Button>
-            <Button href={siteConfig.ctas.primary.href} variant="primary" size="sm">
+            <Button href={siteConfig.ctas.primary.href} variant="primary" size="sm" className="hidden sm:inline-flex">
               {siteConfig.ctas.primary.label}
             </Button>
+            <MobileMenu />
           </div>
         </div>
       </nav>
