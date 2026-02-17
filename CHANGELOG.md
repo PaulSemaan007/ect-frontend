@@ -2,6 +2,28 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Forms & Infrastructure
+
+### Added
+- Quote request form on /quote page (name, email, phone, service type, event details, attendees)
+- Careers application form on /careers/apply (experience, availability, guard card, certifications)
+- API routes: /api/quote and /api/apply (Resend email integration)
+- Resend package for transactional email delivery
+- Puppeteer MCP server for visual testing
+- Branch protection on main (requires CI pass)
+
+### Changed
+- Updated Next.js from 16.0.1 to 16.1.6 (security fix)
+- Expanded Claude Code permissions for autonomous workflow
+- Made GitHub repo public (enables branch protection)
+- Fixed npm audit vulnerabilities (js-yaml, lodash)
+
+### Infrastructure
+- Merged PR #2 (content overhaul) into main
+- Set WP_GRAPHQL_ENDPOINT as GitHub Actions secret
+- Added ectsecurity.com and www.ectsecurity.com as Vercel custom domains
+- Deployed production build to Vercel
+
 ## [2026-02-16] Content Overhaul
 
 ### Changed
