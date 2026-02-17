@@ -15,7 +15,7 @@ export default function ThankYouPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Section>
           <Container size="md">
             <div className="text-center">

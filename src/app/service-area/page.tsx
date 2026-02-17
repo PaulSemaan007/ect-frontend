@@ -63,7 +63,7 @@ export default function ServiceAreaPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
           <Container size="md">
             <Heading as="h1" gradient className="mb-6 text-center">

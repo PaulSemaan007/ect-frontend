@@ -63,7 +63,7 @@ export default function ServicesPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         {/* Hero */}
         <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">

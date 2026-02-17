@@ -42,7 +42,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Section>
           <Container size="lg">
             <Heading as="h1" className="mb-8">

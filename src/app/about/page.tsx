@@ -23,7 +23,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
