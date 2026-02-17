@@ -91,9 +91,9 @@
 
 - [ ] Add Google Analytics 4 via @next/third-parties (needs GA_MEASUREMENT_ID env var)
 - [ ] Add conversion tracking events to form submissions
-- [ ] Add FAQ page with common security service questions
-- [ ] Enhance service area page with specific California/Nevada city lists
-- [ ] Add "Request Callback" floating CTA or sticky mobile CTA
+- [x] Add FAQ page with common security service questions
+- [x] Enhance service area page with specific California/Nevada city lists
+- [x] Add "Request Callback" floating CTA or sticky mobile CTA
 
 ### Tier 4 — Code Quality & Testing
 
