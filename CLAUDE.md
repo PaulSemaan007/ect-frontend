@@ -71,20 +71,51 @@
 
 ## Task Queue
 
-<!-- Add tasks here. Claude works through them top-to-bottom. -->
-<!-- Format: - [ ] Task description -->
-<!-- Mark done: - [x] Task description -->
+### Tier 1 — SEO (Critical for Google Indexing)
 
-## Questions for the Boss
+- [ ] Add `src/app/sitemap.ts` — auto-generates XML sitemap for all pages
+- [ ] Add `src/app/robots.ts` — allows crawlers, points to sitemap
+- [ ] Add Open Graph + Twitter Card meta tags to layout.tsx and per-page overrides
+- [ ] Add JSON-LD structured data (LocalBusiness schema with phone, email, service areas)
+- [ ] Add canonical URLs via Next.js metadata API
+- [ ] Add `generateMetadata` to pages missing it: home, services/[service], [slug]
 
-These need answers before the related changes can be made:
+### Tier 2 — Performance & Security
 
-- What are the actual business/contact hours?
-- Specific cities/areas in Nevada served?
-- Are social media URLs correct or placeholders?
-- Review Parking Assistance service features — trim/add as needed
-- Any certifications or license numbers to display?
-- Is info@ectsecurity.com the correct email?
-- Any testimonials or client logos to add?
-- Company address to display on the site?
-- What photos/images should be used on the site?
+- [ ] Add dynamic imports for heavy client components (HomeServices, StatsCounter, WhyECT, MobileMenu)
+- [ ] Add `loading.tsx` to service routes for instant perceived navigation
+- [ ] Optimize LCP: preload hero image in layout
+- [ ] Add security headers via next.config.ts (X-Frame-Options, CSP, Referrer-Policy)
+
+### Tier 3 — Conversion & Business Growth
+
+- [ ] Add Google Analytics 4 via @next/third-parties (needs GA_MEASUREMENT_ID env var)
+- [ ] Add conversion tracking events to form submissions
+- [ ] Add FAQ page with common security service questions
+- [ ] Enhance service area page with specific California/Nevada city lists
+- [ ] Add "Request Callback" floating CTA or sticky mobile CTA
+
+### Tier 4 — Code Quality & Testing
+
+- [ ] Add tests for QuoteForm and ApplyForm validation
+- [ ] Add tests for API routes (quote, apply) with mocked Resend
+- [ ] Remove unused Badge variants to reduce bundle size
+- [ ] Add Lighthouse CI to GitHub Actions
+
+### Tier 5 — Content & UX Polish
+
+- [ ] Improve privacy/terms pages with professional legal copy
+- [ ] Add breadcrumb navigation to service detail pages
+- [ ] Add "Back to Services" link on individual service pages
+
+## Parked — Needs Boss Input
+
+- [ ] Resend API key (get from resend.com dashboard)
+- [ ] Google Analytics measurement ID
+- [ ] Real team photos (replace AI-generated)
+- [ ] Real testimonials / client logos
+- [ ] Real stats for counters (events secured, years in business)
+- [ ] Business hours
+- [ ] Company address
+- [ ] Specific Nevada cities served
+- [ ] Social media URL verification

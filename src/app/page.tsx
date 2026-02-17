@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { fetchGraphQL } from '@/lib/graphql-client';
 import type { HomePageData, HomeHeroFields } from '@/types/wordpress';
 import { Hero } from '@/components/Hero';
@@ -7,6 +8,15 @@ import { HomeServices } from '@/components/HomeServices';
 import { StatsCounter } from '@/components/StatsCounter';
 import { WhyECT } from '@/components/WhyECT';
 import { SectionDivider, Section, Container, Heading, Button } from '@/components/ui';
+
+export const metadata: Metadata = {
+  title: 'Professional Event Security Across California & Nevada',
+  description:
+    'ECT Security provides licensed guards, crowd management, and event security services across California and Nevada. Get a free quote today.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 const HOME_PAGE_QUERY = `
   query HomePageQuery {
