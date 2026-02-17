@@ -36,7 +36,7 @@ export function AnimateOnScroll({
     <motion.div
       initial={hiddenVariants[direction]}
       whileInView={visibleVariant}
-      viewport={{ once, amount: 0.2 }}
+      viewport={{ once, amount: 0, margin: '0px 0px 100px 0px' }}
       transition={{
         type: 'spring',
         stiffness: 100,

@@ -212,7 +212,13 @@ export function QuoteForm() {
       )}
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={submitting}>
-        {submitting ? <><span className="spinner mr-2" aria-label="Submitting" role="status" /> Submitting...</> : 'Request Quote'}
+        {submitting ? (
+          <>
+            <span className="spinner mr-2" aria-label="Submitting" role="status" /> Submitting...
+          </>
+        ) : (
+          'Request Quote'
+        )}
       </Button>
     </form>
   );

@@ -8,7 +8,13 @@ interface HeadingProps {
   gradient?: boolean;
 }
 
-export function Heading({ as: Tag = 'h2', children, className = '', neon = false, gradient = false }: HeadingProps) {
+export function Heading({
+  as: Tag = 'h2',
+  children,
+  className = '',
+  neon = false,
+  gradient = false,
+}: HeadingProps) {
   const baseStyles = 'font-bold tracking-tight';
 
   const sizeStyles = {

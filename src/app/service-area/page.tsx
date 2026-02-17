@@ -37,7 +37,9 @@ export default function ServiceAreaPage() {
 
             <AnimateOnScroll direction="up">
               <div className="bg-gray-950 border border-gray-800 rounded-lg p-8 mt-12">
-                <h2 className="text-2xl font-bold text-foreground mb-4 text-center">Coverage Details</h2>
+                <h2 className="text-2xl font-bold text-foreground mb-4 text-center">
+                  Coverage Details
+                </h2>
                 <p className="text-gray-300 mb-6 text-center">
                   We provide security services across California and Nevada, including:
                 </p>
@@ -57,7 +59,10 @@ export default function ServiceAreaPage() {
                   Contact us for security services anywhere in California and Nevada
                 </p>
                 <p className="text-gray-400">
-                  <a href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} className="text-neon hover:underline text-lg">
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`}
+                    className="text-neon hover:underline text-lg"
+                  >
                     {siteConfig.contact.phone}
                   </a>
                 </p>

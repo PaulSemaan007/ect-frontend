@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
+import {
+  Container,
+  Section,
+  Heading,
+  Button,
+  AnimateOnScroll,
+  SectionDivider,
+} from '@/components/ui';
 
 export const metadata = {
   title: 'About Us - ECT Security',
-  description: 'Professional security services across California and Nevada. Licensed, trained guards.',
+  description:
+    'Professional security services across California and Nevada. Licensed, trained guards.',
 };
 
 export default function AboutPage() {
@@ -48,10 +56,15 @@ export default function AboutPage() {
                   <h2 className="text-3xl font-bold text-foreground mb-6">Our Mission</h2>
                   <div className="space-y-4 text-gray-300">
                     <p>
-                      ECT Security provides professional, reliable security services for events, venues, and facilities across California and Nevada. Our team of licensed guards brings expertise in crowd management, access control, and emergency response.
+                      ECT Security provides professional, reliable security services for events,
+                      venues, and facilities across California and Nevada. Our team of licensed
+                      guards brings expertise in crowd management, access control, and emergency
+                      response.
                     </p>
                     <p>
-                      We understand that every event and venue has unique security needs. That's why we tailor our approach to match your specific requirements, ensuring safety without compromising the guest experience.
+                      We understand that every event and venue has unique security needs.
+                      That&apos;s why we tailor our approach to match your specific requirements,
+                      ensuring safety without compromising the guest experience.
                     </p>
                   </div>
                 </div>

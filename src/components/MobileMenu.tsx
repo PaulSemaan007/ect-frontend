@@ -64,9 +64,7 @@ export function MobileMenu() {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={`text-3xl font-bold transition-colors ${
-                      pathname === link.href
-                        ? 'text-neon'
-                        : 'text-foreground hover:text-neon'
+                      pathname === link.href ? 'text-neon' : 'text-foreground hover:text-neon'
                     }`}
                     aria-current={pathname === link.href ? 'page' : undefined}
                   >
@@ -96,7 +94,10 @@ export function MobileMenu() {
                 transition={{ delay: siteConfig.nav.main.length * 0.06 + 0.3 }}
                 className="text-gray-400 text-sm"
               >
-                <a href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} className="hover:text-neon transition-colors">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`}
+                  className="hover:text-neon transition-colors"
+                >
                   {siteConfig.contact.phone}
                 </a>
               </motion.div>

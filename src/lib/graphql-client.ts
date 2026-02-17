@@ -7,7 +7,7 @@ function getGraphQLEndpoint(): string {
   const endpoint = process.env.WP_GRAPHQL_ENDPOINT;
   if (!endpoint) {
     throw new Error(
-      'WP_GRAPHQL_ENDPOINT environment variable is not defined. Please check your .env.local file.'
+      'WP_GRAPHQL_ENDPOINT environment variable is not defined. Please check your .env.local file.',
     );
   }
   return endpoint;
@@ -30,7 +30,7 @@ export interface GraphQLResponse<T> {
  */
 export async function fetchGraphQL<T>(
   query: string,
-  variables?: Record<string, unknown>
+  variables?: Record<string, unknown>,
 ): Promise<T> {
   const endpoint = getGraphQLEndpoint();
 
@@ -52,7 +52,7 @@ export async function fetchGraphQL<T>(
 
     if (!response.ok) {
       throw new Error(
-        `GraphQL request failed with status ${response.status}: ${response.statusText}`
+        `GraphQL request failed with status ${response.status}: ${response.statusText}`,
       );
     }
 

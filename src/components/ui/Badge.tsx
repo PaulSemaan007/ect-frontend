@@ -35,8 +35,10 @@ const badgeVariants = cva(
 
         // Special variants
         new: 'bg-gradient-to-r from-neon-20 to-neon-10 text-neon-bright border border-neon-primary animate-pulse-neon',
-        featured: 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 border border-purple-500/30',
-        popular: 'bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-300 border border-orange-500/30',
+        featured:
+          'bg-gradient-to-r from-purple-500/20 to-pink-500/20 text-purple-300 border border-purple-500/30',
+        popular:
+          'bg-gradient-to-r from-orange-500/20 to-red-500/20 text-orange-300 border border-orange-500/30',
 
         // Solid variants
         solid: 'bg-gray-700 text-gray-100 border-0',
@@ -64,12 +66,11 @@ const badgeVariants = cva(
       size: 'md',
       pill: false,
     },
-  }
+  },
 );
 
 export interface BadgeProps
-  extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {
+  extends React.HTMLAttributes<HTMLSpanElement>, VariantProps<typeof badgeVariants> {
   /**
    * Optional icon to display before text
    */
@@ -93,37 +94,17 @@ const dotColors = {
 };
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
-  (
-    {
-      className,
-      variant,
-      size,
-      pill,
-      icon,
-      dot,
-      dotColor = 'neon',
-      children,
-      ...props
-    },
-    ref
-  ) => {
+  ({ className, variant, size, pill, icon, dot, dotColor = 'neon', children, ...props }, ref) => {
     return (
-      <span
-        ref={ref}
-        className={badgeVariants({ variant, size, pill, className })}
-        {...props}
-      >
+      <span ref={ref} className={badgeVariants({ variant, size, pill, className })} {...props}>
         {dot && (
-          <span
-            className={`w-1.5 h-1.5 rounded-full ${dotColors[dotColor]}`}
-            aria-hidden="true"
-          />
+          <span className={`w-1.5 h-1.5 rounded-full ${dotColors[dotColor]}`} aria-hidden="true" />
         )}
         {icon && <span className="flex-shrink-0">{icon}</span>}
         {children}
       </span>
     );
-  }
+  },
 );
 
 Badge.displayName = 'Badge';
@@ -138,17 +119,13 @@ export const NewBadge: React.FC<{ className?: string }> = ({ className }) => (
   </Badge>
 );
 
-export const FeaturedBadge: React.FC<{ className?: string }> = ({
-  className,
-}) => (
+export const FeaturedBadge: React.FC<{ className?: string }> = ({ className }) => (
   <Badge variant="featured" size="sm" className={className}>
     Featured
   </Badge>
 );
 
-export const PopularBadge: React.FC<{ className?: string }> = ({
-  className,
-}) => (
+export const PopularBadge: React.FC<{ className?: string }> = ({ className }) => (
   <Badge variant="popular" size="sm" className={className}>
     Popular
   </Badge>
@@ -159,12 +136,7 @@ export const TwentyFourSevenBadge: React.FC<{
   size?: 'sm' | 'md' | 'lg';
 }> = ({ className, size = 'md' }) => (
   <Badge variant="neon" size={size} pill className={className}>
-    <svg
-      className="w-3 h-3"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
+    <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -182,23 +154,13 @@ export const LiveBadge: React.FC<{ className?: string }> = ({ className }) => (
   </Badge>
 );
 
-export const OnlineBadge: React.FC<{ className?: string }> = ({
-  className,
-}) => (
-  <Badge
-    variant="success"
-    size="sm"
-    dot
-    dotColor="success"
-    className={className}
-  >
+export const OnlineBadge: React.FC<{ className?: string }> = ({ className }) => (
+  <Badge variant="success" size="sm" dot dotColor="success" className={className}>
     Online
   </Badge>
 );
 
-export const OfflineBadge: React.FC<{ className?: string }> = ({
-  className,
-}) => (
+export const OfflineBadge: React.FC<{ className?: string }> = ({ className }) => (
   <Badge variant="default" size="sm" dot className={className}>
     Offline
   </Badge>

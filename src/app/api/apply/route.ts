@@ -3,7 +3,8 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, guardCard, experience, availability, certifications, details } = body;
+    const { name, email, phone, guardCard, experience, availability, certifications, details } =
+      body;
 
     if (!name || !email || !phone || !experience || !details) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -25,7 +26,9 @@ export async function POST(request: Request) {
     const { Resend } = await import('resend');
     const resend = new Resend(apiKey);
 
-    const availabilityList = Array.isArray(availability) ? availability.join(', ') : availability || 'Not specified';
+    const availabilityList = Array.isArray(availability)
+      ? availability.join(', ')
+      : availability || 'Not specified';
 
     await resend.emails.send({
       from: 'ECT Security <careers@ectsecurity.com>',

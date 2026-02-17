@@ -21,10 +21,7 @@ export default function ApplyPage() {
             </Heading>
             <p className="text-gray-300 text-center mb-12 text-lg">
               Submit your application below or email your resume to{' '}
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="text-neon hover:underline"
-              >
+              <a href={`mailto:${siteConfig.contact.email}`} className="text-neon hover:underline">
                 {siteConfig.contact.email}
               </a>
             </p>

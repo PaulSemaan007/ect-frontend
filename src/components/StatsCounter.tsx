@@ -13,13 +13,13 @@ const stats: StatItem[] = [
   { value: 500, suffix: '+', label: 'Events Secured' },
   { value: 10, suffix: '+', label: 'Years Experience' },
   { value: 2, suffix: '', label: 'States Licensed' },
-  { value: 24, suffix: '/7', label: 'Availability' },
+  { value: 100, suffix: '%', label: 'Licensed Guards' },
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const isInView = useInView(ref, { once: true, amount: 0 });
 
   useEffect(() => {
     if (!isInView) return;
@@ -44,7 +44,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
   return (
     <span ref={ref}>
-      {count}{suffix}
+      {count}
+      {suffix}
     </span>
   );
 }
@@ -60,7 +61,7 @@ export function StatsCounter() {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 100,

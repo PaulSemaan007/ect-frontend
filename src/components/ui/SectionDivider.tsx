@@ -10,5 +10,7 @@ export function SectionDivider({ variant = 'glow', className = '' }: SectionDivi
     glow: 'h-px bg-gradient-to-r from-transparent via-neon/30 to-transparent shadow-[0_0_15px_var(--color-neon-20),0_0_5px_var(--color-neon-10)]',
   };
 
-  return <div className={`w-full ${styles[variant]} ${className}`} role="separator" aria-hidden="true" />;
+  return (
+    <div className={`w-full ${styles[variant]} ${className}`} role="separator" aria-hidden="true" />
+  );
 }
