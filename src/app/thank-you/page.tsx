@@ -17,9 +17,29 @@ export default function ThankYouPage() {
         <Section>
           <Container size="md">
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-neon/10 border-2 border-neon mb-6">
-                <svg className="w-10 h-10 text-neon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div className="inline-flex items-center justify-center w-24 h-24 mb-6">
+                <svg
+                  className="checkmark-animated w-24 h-24"
+                  viewBox="0 0 52 52"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="26"
+                    cy="26"
+                    r="25"
+                    stroke="var(--color-neon-primary)"
+                    strokeWidth="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M14.1 27.2l7.1 7.2 16.7-16.8"
+                    stroke="var(--color-neon-primary)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    fill="none"
+                  />
                 </svg>
               </div>
 

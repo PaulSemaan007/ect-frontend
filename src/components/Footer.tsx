@@ -1,15 +1,17 @@
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import { SectionDivider } from '@/components/ui';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-950 border-t border-gray-800">
+    <footer className="bg-gray-950">
+      <SectionDivider variant="glow" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand & Contact */}
           <div className="space-y-4">
             <div className="text-xl font-bold">
-              <span className="text-neon">ECT</span>
+              <span className="text-neon neon-glow-xs">ECT</span>
               <span className="text-foreground ml-1">Security</span>
             </div>
             <p className="text-gray-400 text-sm">
@@ -79,7 +81,7 @@ export function Footer() {
                 href={siteConfig.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-neon transition-colors"
+                className="text-gray-400 hover:text-neon transition-all hover-scale"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -90,7 +92,7 @@ export function Footer() {
                 href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-neon transition-colors"
+                className="text-gray-400 hover:text-neon transition-all hover-scale"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -101,7 +103,7 @@ export function Footer() {
                 href={siteConfig.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-neon transition-colors"
+                className="text-gray-400 hover:text-neon transition-all hover-scale"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -112,7 +114,7 @@ export function Footer() {
                 href={siteConfig.socials.tiktok}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-neon transition-colors"
+                className="text-gray-400 hover:text-neon transition-all hover-scale"
                 aria-label="TikTok"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

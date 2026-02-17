@@ -5,9 +5,10 @@ interface HeadingProps {
   children: ReactNode;
   className?: string;
   neon?: boolean;
+  gradient?: boolean;
 }
 
-export function Heading({ as: Tag = 'h2', children, className = '', neon = false }: HeadingProps) {
+export function Heading({ as: Tag = 'h2', children, className = '', neon = false, gradient = false }: HeadingProps) {
   const baseStyles = 'font-bold tracking-tight';
 
   const sizeStyles = {
@@ -20,9 +21,10 @@ export function Heading({ as: Tag = 'h2', children, className = '', neon = false
   };
 
   const neonClass = neon ? 'text-neon neon-glow-sm' : '';
+  const gradientClass = gradient ? 'text-gradient-neon' : '';
 
   return (
-    <Tag className={`${baseStyles} ${sizeStyles[Tag]} ${neonClass} ${className}`}>
+    <Tag className={`${baseStyles} ${sizeStyles[Tag]} ${neonClass} ${gradientClass} ${className}`}>
       {children}
     </Tag>
   );

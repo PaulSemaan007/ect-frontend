@@ -1,6 +1,6 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading } from '@/components/ui';
+import { Container, Section, Heading, AnimateOnScroll } from '@/components/ui';
 import { QuoteForm } from '@/components/QuoteForm';
 import { siteConfig } from '@/config/site';
 
@@ -16,7 +16,7 @@ export default function QuotePage() {
       <main className="min-h-screen">
         <Section>
           <Container size="md">
-            <Heading as="h1" className="mb-4 text-center">
+            <Heading as="h1" gradient className="mb-4 text-center">
               Get a Custom Security Quote
             </Heading>
             <p className="text-gray-300 text-center mb-12 text-lg">
@@ -29,9 +29,11 @@ export default function QuotePage() {
               </a>
             </p>
 
-            <div className="bg-gray-900 border border-gray-800 rounded-lg p-8">
-              <QuoteForm />
-            </div>
+            <AnimateOnScroll direction="scale">
+              <div className="glass-neon elevated-neon border border-gray-800 rounded-lg p-8">
+                <QuoteForm />
+              </div>
+            </AnimateOnScroll>
           </Container>
         </Section>
       </main>

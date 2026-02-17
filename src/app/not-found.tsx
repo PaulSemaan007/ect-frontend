@@ -10,7 +10,7 @@ export default function NotFound() {
       <main className="min-h-screen flex items-center justify-center py-20">
         <Container size="md">
           <div className="text-center">
-            <div className="text-9xl font-bold text-neon mb-4">404</div>
+            <div className="text-9xl font-bold text-neon neon-glow-lg mb-4 animate-glitch-slow">404</div>
             <Heading as="h1" className="mb-4">
               Page Not Found
             </Heading>

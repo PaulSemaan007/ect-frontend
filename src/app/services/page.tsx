@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button } from '@/components/ui';
+import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
 export const metadata = {
@@ -45,7 +45,7 @@ export default function ServicesPage() {
         <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
-              <Heading as="h1" className="mb-6">
+              <Heading as="h1" gradient className="mb-6">
                 Professional Security Services
               </Heading>
               <p className="text-xl text-gray-300 mb-8">
@@ -58,45 +58,49 @@ export default function ServicesPage() {
           </Container>
         </Section>
 
+        <SectionDivider variant="gradient" />
+
         {/* Services Grid */}
         <Section>
           <Container>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service) => (
-                <div
-                  key={service.href}
-                  className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-neon/50 transition-all group"
-                >
-                  <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-neon transition-colors">
-                    {service.title}
-                  </h2>
-                  <p className="text-gray-400 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature) => (
-                      <li key={feature} className="flex items-center text-gray-300 text-sm">
-                        <span className="text-neon mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={service.href}
-                    className="inline-flex items-center text-neon hover:underline font-medium"
-                  >
-                    Learn More
-                    <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
+              {services.map((service, i) => (
+                <AnimateOnScroll key={service.href} delay={i * 100}>
+                  <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-neon/50 transition-all group hover-lift hover-glow card-shimmer h-full">
+                    <h2 className="text-2xl font-bold text-foreground mb-3 group-hover:text-neon transition-colors">
+                      {service.title}
+                    </h2>
+                    <p className="text-gray-400 mb-4">{service.description}</p>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center text-gray-300 text-sm">
+                          <span className="text-neon mr-2">✓</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={service.href}
+                      className="inline-flex items-center text-neon hover:underline font-medium"
+                    >
+                      Learn More
+                      <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </AnimateOnScroll>
               ))}
             </div>
           </Container>
         </Section>
 
+        <SectionDivider variant="glow" />
+
         {/* CTA */}
         <Section className="bg-gray-900">
           <Container>
+            <AnimateOnScroll direction="up">
             <div className="text-center max-w-2xl mx-auto">
               <Heading as="h2" className="mb-4">
                 Ready to Secure Your Event?
@@ -113,6 +117,7 @@ export default function ServicesPage() {
                 </Button>
               </div>
             </div>
+            </AnimateOnScroll>
           </Container>
         </Section>
       </main>
