@@ -104,7 +104,7 @@
 
 ### Tier 5 — Content & UX Polish
 
-- [ ] Improve privacy/terms pages with professional legal copy
+- [x] Improve privacy/terms pages with professional legal copy
 - [x] Add breadcrumb navigation to service detail pages
 - [x] Add "Back to Services" link on individual service pages
 
