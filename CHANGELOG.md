@@ -2,6 +2,15 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Component Tests
+
+### Added
+
+- Header component tests (4 tests): brand rendering, CTA button, nav links, logo link
+- Footer component tests (7 tests): brand, contact info, service links, service areas, legal links, social media ARIA labels, copyright year
+- Hero component tests (6 tests): headline, subheadline, primary/secondary CTAs, trust indicators, background image
+- Test count: 31 → 48 tests across 10 test files
+
 ## [2026-02-17] Schema & SEO Enrichment
 
 ### Added
