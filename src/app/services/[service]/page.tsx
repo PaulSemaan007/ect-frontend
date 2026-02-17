@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
@@ -107,6 +108,19 @@ interface ServicePageProps {
   params: Promise<{
     service: string;
   }>;
+}
+
+export async function generateMetadata({ params }: ServicePageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const service = serviceContent[resolvedParams.service];
+  if (!service) return {};
+  return {
+    title: service.title,
+    description: service.description,
+    alternates: {
+      canonical: `/services/${resolvedParams.service}`,
+    },
+  };
 }
 
 export default async function ServicePage({ params }: ServicePageProps) {
