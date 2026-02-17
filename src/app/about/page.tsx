@@ -1,6 +1,8 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { siteConfig } from '@/config/site';
 import {
   Container,
   Section,
@@ -10,10 +12,11 @@ import {
   SectionDivider,
 } from '@/components/ui';
 
-export const metadata = {
-  title: 'About Us - ECT Security',
+export const metadata: Metadata = {
+  title: 'About Us',
   description:
     'Professional security services across California and Nevada. Licensed, trained guards.',
+  alternates: { canonical: '/about' },
 };
 
 export default function AboutPage() {
@@ -118,6 +121,37 @@ export default function AboutPage() {
         </Section>
       </main>
       <Footer />
+
+      {/* Organization structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'ECT Security',
+            url: 'https://ectsecurity.com',
+            logo: 'https://ectsecurity.com/images/hero-festival.png',
+            description:
+              'Professional event security and crowd control services across California and Nevada.',
+            telephone: siteConfig.contact.phone,
+            email: siteConfig.contact.email,
+            areaServed: siteConfig.serviceAreas.map((area) => ({
+              '@type': 'State',
+              name: area,
+            })),
+            sameAs: Object.values(siteConfig.socials),
+            knowsAbout: [
+              'Event Security',
+              'Venue Security',
+              'Corporate Security',
+              'Parking Assistance',
+              'Crowd Management',
+              'Access Control',
+            ],
+          }),
+        }}
+      />
     </>
   );
 }

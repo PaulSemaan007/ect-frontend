@@ -2,6 +2,14 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Schema & SEO Enrichment
+
+### Added
+
+- Service JSON-LD schema on individual service pages (provider, area served, offer catalog with features)
+- Organization JSON-LD schema on about page (name, URL, logo, contact, social links, expertise areas)
+- Typed `Metadata` export and canonical URL on about page
+
 ## [2026-02-17] Lighthouse CI
 
 ### Added
