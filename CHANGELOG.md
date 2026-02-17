@@ -2,6 +2,14 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Lighthouse CI
+
+### Added
+
+- Lighthouse CI job in GitHub Actions pipeline running against homepage, services, and about pages
+- Scores uploaded as artifacts on every PR and push to main
+- Runs in parallel with the existing quality job (non-blocking)
+
 ## [2026-02-17] Content & UX Polish
 
 ### Added
