@@ -2,6 +2,37 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] SEO Foundations
+
+### Added
+
+- XML sitemap at /sitemap.xml (auto-generated for all 13 pages)
+- robots.txt at /robots.txt (allows crawlers, blocks /api/ and /thank-you)
+- Open Graph meta tags (title, description, image, locale, site name)
+- Twitter Card meta tags (summary_large_image)
+- JSON-LD structured data (LocalBusiness schema with phone, email, services, service areas)
+- Canonical URLs on all pages via Next.js metadata API
+- `generateMetadata` on dynamic service pages (services/[service])
+- Homepage-specific metadata with targeted title and description
+- Title template: `%s | ECT Security` for consistent branding
+
+## [2026-02-17] Autonomy Infrastructure
+
+### Added
+
+- Vitest + Testing Library test framework (13 tests across 3 suites)
+- Husky + lint-staged pre-commit hooks (auto-format on commit)
+- Error boundaries: `error.tsx` (route-level) and `global-error.tsx` (root-level)
+- `.env.example` documenting required environment variables
+- npm scripts: `validate`, `test`, `test:watch`, `type-check`, `format`, `format:check`, `lint:fix`, `screenshots`
+
+### Changed
+
+- Enhanced CI pipeline: type-check → lint → format:check → test → build
+- Updated CLAUDE.md with workflow, available scripts, and prioritized task queue
+- Fixed 18 ESLint errors across 6 files (unused imports, unescaped entities, JSX in try/catch)
+- Formatted all 59 files with Prettier
+
 ## [2026-02-17] Forms & Infrastructure
 
 ### Added

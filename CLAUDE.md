@@ -73,12 +73,12 @@
 
 ### Tier 1 — SEO (Critical for Google Indexing)
 
-- [ ] Add `src/app/sitemap.ts` — auto-generates XML sitemap for all pages
-- [ ] Add `src/app/robots.ts` — allows crawlers, points to sitemap
-- [ ] Add Open Graph + Twitter Card meta tags to layout.tsx and per-page overrides
-- [ ] Add JSON-LD structured data (LocalBusiness schema with phone, email, service areas)
-- [ ] Add canonical URLs via Next.js metadata API
-- [ ] Add `generateMetadata` to pages missing it: home, services/[service], [slug]
+- [x] Add `src/app/sitemap.ts` — auto-generates XML sitemap for all pages
+- [x] Add `src/app/robots.ts` — allows crawlers, points to sitemap
+- [x] Add Open Graph + Twitter Card meta tags to layout.tsx and per-page overrides
+- [x] Add JSON-LD structured data (LocalBusiness schema with phone, email, service areas)
+- [x] Add canonical URLs via Next.js metadata API
+- [x] Add `generateMetadata` to pages missing it: home, services/[service], [slug]
 
 ### Tier 2 — Performance & Security
 
