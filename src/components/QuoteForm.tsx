@@ -207,12 +207,12 @@ export function QuoteForm() {
 
       {error && (
         <div className="bg-red-900/30 border border-red-800 rounded-lg p-4 text-red-300">
-          {error}
+          <span role="status">{error}</span>
         </div>
       )}
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={submitting}>
-        {submitting ? <><span className="spinner mr-2" /> Submitting...</> : 'Request Quote'}
+        {submitting ? <><span className="spinner mr-2" aria-label="Submitting" role="status" /> Submitting...</> : 'Request Quote'}
       </Button>
     </form>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { GridBackground } from "@/components/ui/GridBackground";
+import { SmoothScrollProvider } from "@/lib/smooth-scroll";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -28,7 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GridBackground>{children}</GridBackground>
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-neon focus:text-gray-950 focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold">
+          Skip to content
+        </a>
+        <SmoothScrollProvider>
+          <GridBackground>{children}</GridBackground>
+        </SmoothScrollProvider>
       </body>
     </html>
   );
