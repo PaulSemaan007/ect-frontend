@@ -1,0 +1,63 @@
+import { notFound } from 'next/navigation';
+import { fetchGraphQL } from '@/lib/graphql-client';
+import type { PageByUriData } from '@/types/wordpress';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Container, Section, Heading } from '@/components/ui';
+
+const PAGE_BY_URI_QUERY = `
+  query PageByUri($uri: String!) {
+    nodeByUri(uri: $uri) {
+      ... on Page {
+        title
+        content
+        slug
+        date
+      }
+    }
+  }
+`;
+
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export default async function Page({ params }: PageProps) {
+  const resolvedParams = await params;
+  const uri = `/${resolvedParams.slug}`;
+
+  try {
+    const data = await fetchGraphQL<PageByUriData>(PAGE_BY_URI_QUERY, { uri });
+
+    if (!data.nodeByUri) {
+      notFound();
+    }
+
+    const page = data.nodeByUri;
+
+    return (
+      <>
+        <Header />
+        <main className="min-h-screen">
+          <Section>
+            <Container size="lg">
+              <Heading as="h1" className="mb-8">
+                {page.title}
+              </Heading>
+              <div
+                className="prose prose-invert prose-lg max-w-none"
+                dangerouslySetInnerHTML={{ __html: page.content }}
+              />
+            </Container>
+          </Section>
+        </main>
+        <Footer />
+      </>
+    );
+  } catch (error) {
+    console.error('Failed to fetch page:', error);
+    notFound();
+  }
+}
