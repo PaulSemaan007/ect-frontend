@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button } from '@/components/ui';
+import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
 const serviceContent: Record<string, {
@@ -100,7 +100,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
           <Container size="lg">
             <div className="max-w-3xl">
-              <Heading as="h1" className="mb-6">
+              <Heading as="h1" gradient className="mb-6">
                 {service.title}
               </Heading>
               <p className="text-xl text-gray-300">
@@ -110,77 +110,91 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </Container>
         </Section>
 
+        <SectionDivider variant="gradient" />
+
         {/* Features & Details */}
         <Section>
           <Container size="lg">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Features */}
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Key Features</h2>
-                <ul className="space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start text-gray-300">
-                      <span className="text-neon mr-3 mt-1">✓</span>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <AnimateOnScroll direction="left">
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">Key Features</h2>
+                  <ul className="space-y-3">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start text-gray-300">
+                        <span className="text-neon mr-3 mt-1">✓</span>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </AnimateOnScroll>
 
               {/* Details */}
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">Why Choose ECT?</h2>
-                <div className="space-y-4 text-gray-300">
-                  {service.details.map((detail, index) => (
-                    <p key={index}>{detail}</p>
-                  ))}
+              <AnimateOnScroll direction="right" delay={200}>
+                <div>
+                  <h2 className="text-2xl font-bold text-foreground mb-6">Why Choose ECT?</h2>
+                  <div className="space-y-4 text-gray-300">
+                    {service.details.map((detail, index) => (
+                      <p key={index}>{detail}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </AnimateOnScroll>
             </div>
           </Container>
         </Section>
+
+        <SectionDivider variant="glow" />
 
         {/* Service Areas */}
         <Section className="bg-gray-900">
           <Container>
-            <div className="text-center">
-              <h2 className="text-2xl font-bold text-foreground mb-4">Service Areas</h2>
-              <p className="text-gray-300 mb-6">
-                We provide security services throughout California and Nevada:
-              </p>
-              <div className="flex flex-wrap justify-center gap-3">
-                {siteConfig.serviceAreas.map((area) => (
-                  <span
-                    key={area}
-                    className="px-4 py-2 bg-gray-950 border border-gray-800 rounded-full text-sm text-gray-300"
-                  >
-                    {area}
-                  </span>
-                ))}
+            <AnimateOnScroll direction="up">
+              <div className="text-center">
+                <h2 className="text-2xl font-bold text-foreground mb-4">Service Areas</h2>
+                <p className="text-gray-300 mb-6">
+                  We provide security services throughout California and Nevada:
+                </p>
+                <div className="flex flex-wrap justify-center gap-3">
+                  {siteConfig.serviceAreas.map((area) => (
+                    <span
+                      key={area}
+                      className="px-4 py-2 bg-gray-950 border border-gray-800 rounded-full text-sm text-gray-300 hover:border-neon/50 transition-colors"
+                    >
+                      {area}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </Container>
         </Section>
+
+        <SectionDivider variant="gradient" />
 
         {/* CTA */}
         <Section>
           <Container>
-            <div className="text-center max-w-2xl mx-auto">
-              <Heading as="h2" className="mb-4">
-                Ready to Get Started?
-              </Heading>
-              <p className="text-gray-300 mb-8 text-lg">
-                Contact us today for a custom security quote tailored to your needs
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/quote" variant="primary" size="lg">
-                  Get a Quote
-                </Button>
-                <Button href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} variant="outline" size="lg">
-                  Call {siteConfig.contact.phone}
-                </Button>
+            <AnimateOnScroll direction="up">
+              <div className="text-center max-w-2xl mx-auto">
+                <Heading as="h2" className="mb-4">
+                  Ready to Get Started?
+                </Heading>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Contact us today for a custom security quote tailored to your needs
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button href="/quote" variant="primary" size="lg">
+                    Get a Quote
+                  </Button>
+                  <Button href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} variant="outline" size="lg">
+                    Call {siteConfig.contact.phone}
+                  </Button>
+                </div>
               </div>
-            </div>
+            </AnimateOnScroll>
           </Container>
         </Section>
       </main>

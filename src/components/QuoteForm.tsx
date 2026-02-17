@@ -52,7 +52,7 @@ export function QuoteForm() {
   }
 
   const inputStyles =
-    'w-full bg-gray-950 border border-gray-700 rounded-lg px-4 py-3 text-foreground placeholder-gray-500 focus:outline-none focus:border-neon focus:ring-1 focus:ring-neon transition-colors';
+    'w-full bg-gray-950 border border-gray-700 rounded-lg px-4 py-3 text-foreground placeholder-gray-500 focus:outline-none focus:border-neon focus:shadow-[0_0_0_1px_var(--color-neon-primary),0_0_15px_var(--color-neon-10)] transition-all duration-200';
   const labelStyles = 'block text-sm font-medium text-gray-300 mb-2';
   const errorStyles = 'text-red-400 text-sm mt-1';
 
@@ -212,7 +212,7 @@ export function QuoteForm() {
       )}
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={submitting}>
-        {submitting ? 'Submitting...' : 'Request Quote'}
+        {submitting ? <><span className="spinner mr-2" /> Submitting...</> : 'Request Quote'}
       </Button>
     </form>
   );
