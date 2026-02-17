@@ -2,19 +2,28 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
+import {
+  Container,
+  Section,
+  Heading,
+  Button,
+  AnimateOnScroll,
+  SectionDivider,
+} from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
 export const metadata = {
   title: 'Security Services - ECT Security',
-  description: 'Professional security services for events, venues, and corporate clients across California and Nevada',
+  description:
+    'Professional security services for events, venues, and corporate clients across California and Nevada',
 };
 
 const services = [
   {
     title: 'Events & Festivals',
     href: '/services/events',
-    description: 'Professional crowd control and security for festivals, concerts, and large-scale events.',
+    description:
+      'Professional crowd control and security for festivals, concerts, and large-scale events.',
     features: ['Crowd Management', 'Access Control', 'Emergency Response'],
   },
   {
@@ -27,13 +36,24 @@ const services = [
     title: 'Corporate Security',
     href: '/services/corporate',
     description: 'Executive protection and facility security for corporate environments.',
-    features: ['Executive Protection', 'Facility Security', 'Access Management', 'Threat Assessment'],
+    features: [
+      'Executive Protection',
+      'Facility Security',
+      'Access Management',
+      'Threat Assessment',
+    ],
   },
   {
     title: 'Parking Assistance',
     href: '/services/parking',
-    description: 'Professional parking management and traffic direction for events, venues, and facilities.',
-    features: ['Traffic & Lot Management', 'Parking Direction', 'ADA Compliance', 'Event Parking Planning'],
+    description:
+      'Professional parking management and traffic direction for events, venues, and facilities.',
+    features: [
+      'Traffic & Lot Management',
+      'Parking Direction',
+      'ADA Compliance',
+      'Event Parking Planning',
+    ],
   },
 ];
 
@@ -62,7 +82,8 @@ export default function ServicesPage() {
                 Professional Security Services
               </Heading>
               <p className="text-xl text-gray-300 mb-8">
-                Licensed, trained guards for events, venues, and facilities across California and Nevada
+                Licensed, trained guards for events, venues, and facilities across California and
+                Nevada
               </p>
               <Button href="/quote" variant="primary" size="lg">
                 Get a Custom Quote
@@ -97,8 +118,18 @@ export default function ServicesPage() {
                       className="inline-flex items-center text-neon hover:underline font-medium"
                     >
                       Learn More
-                      <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      <svg
+                        className="w-4 h-4 ml-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
                       </svg>
                     </Link>
                   </div>
@@ -114,22 +145,26 @@ export default function ServicesPage() {
         <Section className="bg-gray-900">
           <Container>
             <AnimateOnScroll direction="up">
-            <div className="text-center max-w-2xl mx-auto">
-              <Heading as="h2" className="mb-4">
-                Ready to Secure Your Event?
-              </Heading>
-              <p className="text-gray-300 mb-8 text-lg">
-                Get a custom quote tailored to your specific security needs
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/quote" variant="primary" size="lg">
-                  Request a Quote
-                </Button>
-                <Button href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} variant="outline" size="lg">
-                  Call {siteConfig.contact.phone}
-                </Button>
+              <div className="text-center max-w-2xl mx-auto">
+                <Heading as="h2" className="mb-4">
+                  Ready to Secure Your Event?
+                </Heading>
+                <p className="text-gray-300 mb-8 text-lg">
+                  Get a custom quote tailored to your specific security needs
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button href="/quote" variant="primary" size="lg">
+                    Request a Quote
+                  </Button>
+                  <Button
+                    href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`}
+                    variant="outline"
+                    size="lg"
+                  >
+                    Call {siteConfig.contact.phone}
+                  </Button>
+                </div>
               </div>
-            </div>
             </AnimateOnScroll>
           </Container>
         </Section>

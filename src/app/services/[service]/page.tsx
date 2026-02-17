@@ -2,25 +2,39 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
+import {
+  Container,
+  Section,
+  Heading,
+  Button,
+  AnimateOnScroll,
+  SectionDivider,
+} from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
 const serviceImages: Record<string, { src: string; alt: string }> = {
   events: { src: '/images/services-event.png', alt: 'Large outdoor event secured by ECT Security' },
   venues: { src: '/images/services-corporate.png', alt: 'Venue entrance secured by ECT Security' },
-  corporate: { src: '/images/services-corporate.png', alt: 'Corporate facility secured by ECT Security' },
+  corporate: {
+    src: '/images/services-corporate.png',
+    alt: 'Corporate facility secured by ECT Security',
+  },
   parking: { src: '/images/services-event.png', alt: 'Event parking managed by ECT Security' },
 };
 
-const serviceContent: Record<string, {
-  title: string;
-  description: string;
-  features: string[];
-  details: string[];
-}> = {
+const serviceContent: Record<
+  string,
+  {
+    title: string;
+    description: string;
+    features: string[];
+    details: string[];
+  }
+> = {
   events: {
     title: 'Events & Festivals Security',
-    description: 'Professional crowd control and security management for festivals, concerts, and large-scale events across California and Nevada.',
+    description:
+      'Professional crowd control and security management for festivals, concerts, and large-scale events across California and Nevada.',
     features: [
       'Crowd Management & Control',
       'Access Control & Ticketing',
@@ -36,7 +50,8 @@ const serviceContent: Record<string, {
   },
   venues: {
     title: 'Venue Security Services',
-    description: 'Comprehensive security solutions for theaters, arenas, concert halls, and entertainment venues.',
+    description:
+      'Comprehensive security solutions for theaters, arenas, concert halls, and entertainment venues.',
     features: [
       'Perimeter & Access Control',
       'Patron Screening & Bag Checks',
@@ -52,7 +67,8 @@ const serviceContent: Record<string, {
   },
   corporate: {
     title: 'Corporate Security Solutions',
-    description: 'Executive protection, facility security, and risk management for corporate environments.',
+    description:
+      'Executive protection, facility security, and risk management for corporate environments.',
     features: [
       'Executive & VIP Protection',
       'Facility Access Control',
@@ -69,7 +85,8 @@ const serviceContent: Record<string, {
   },
   parking: {
     title: 'Parking Assistance',
-    description: 'Professional parking lot management and traffic direction for events, venues, and facilities across California and Nevada.',
+    description:
+      'Professional parking lot management and traffic direction for events, venues, and facilities across California and Nevada.',
     features: [
       'Traffic & Lot Management',
       'Parking Direction & Guidance',
@@ -123,9 +140,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               <Heading as="h1" gradient className="mb-6">
                 {service.title}
               </Heading>
-              <p className="text-xl text-gray-300">
-                {service.description}
-              </p>
+              <p className="text-xl text-gray-300">{service.description}</p>
             </div>
           </Container>
         </section>
@@ -209,7 +224,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
                   <Button href="/quote" variant="primary" size="lg">
                     Get a Quote
                   </Button>
-                  <Button href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} variant="outline" size="lg">
+                  <Button
+                    href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`}
+                    variant="outline"
+                    size="lg"
+                  >
                     Call {siteConfig.contact.phone}
                   </Button>
                 </div>

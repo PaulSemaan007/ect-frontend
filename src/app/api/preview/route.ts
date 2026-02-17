@@ -6,17 +6,14 @@ export async function GET(request: NextRequest) {
 
   const searchParams = request.nextUrl.searchParams;
   const id = searchParams.get('id');
-  const postType = searchParams.get('type') || 'post';
+  const _postType = searchParams.get('type') || 'post';
 
   // TODO: Add authentication with WordPress Application Passwords
   // const auth = request.headers.get('authorization');
   // Validate auth against WordPress
 
   if (!id) {
-    return NextResponse.json(
-      { message: 'Missing post ID' },
-      { status: 400 }
-    );
+    return NextResponse.json({ message: 'Missing post ID' }, { status: 400 });
   }
 
   // TODO: Fetch preview content from WordPress
@@ -37,7 +34,7 @@ export async function GET(request: NextRequest) {
       '4. Enable Next.js draft mode',
       '5. Redirect to preview page',
     ],
-    todo: 'See comments in src/app/api/preview/route.ts for implementation details'
+    todo: 'See comments in src/app/api/preview/route.ts for implementation details',
   });
 }
 

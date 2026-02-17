@@ -22,19 +22,9 @@ Comprehensive design tokens for consistent styling across the application.
 
 ```css
 /* Brand */
---color-neon-primary: #39FF14
---color-neon-dim: #2ecc11
---color-neon-bright: #4DFF29
---color-neon-dark: #1fa008
-
-/* Neutrals */
---color-gray-50 through --color-gray-950
-
-/* Semantic */
---color-background
---color-foreground
---color-muted
---color-border
+--color-neon-primary: #39ff14 --color-neon-dim: #2ecc11 --color-neon-bright: #4dff29
+  --color-neon-dark: #1fa008 /* Neutrals */ --color-gray-50 through --color-gray-950 /* Semantic */
+  --color-background --color-foreground --color-muted --color-border;
 ```
 
 ### Alpha Variants
@@ -51,6 +41,7 @@ Use opacity variants for layering and overlays:
 ```
 
 **Example:**
+
 ```css
 /* Subtle neon background */
 background: var(--color-neon-10);
@@ -75,6 +66,7 @@ Based on 4px scale. Use consistent spacing throughout the app.
 ```
 
 **Example:**
+
 ```css
 padding: var(--space-4) var(--space-6);
 margin-bottom: var(--space-8);
@@ -88,8 +80,7 @@ gap: var(--space-3);
 ### Font Families
 
 ```css
---font-sans: Geist Sans fallback stack
---font-mono: Geist Mono fallback stack
+--font-sans: Geist Sans fallback stack --font-mono: Geist Mono fallback stack;
 ```
 
 ### Font Sizes (Type Scale 1.25)
@@ -127,6 +118,7 @@ gap: var(--space-3);
 ```
 
 **Example:**
+
 ```css
 font-size: var(--text-2xl);
 font-weight: var(--font-bold);
@@ -161,6 +153,7 @@ line-height: var(--leading-tight);
 ```
 
 **Example:**
+
 ```css
 /* Standard elevation */
 box-shadow: var(--shadow-lg);
@@ -195,6 +188,7 @@ box-shadow: var(--shadow-elevated-neon);
 ```
 
 **Example:**
+
 ```css
 border: var(--border-1) solid var(--color-gray-800);
 border-radius: var(--radius-lg);
@@ -207,17 +201,12 @@ border-radius: var(--radius-lg);
 Use named layers for consistency:
 
 ```css
---z-dropdown: 1000
---z-sticky: 1100
---z-fixed: 1200
---z-modal-backdrop: 1300
---z-modal: 1400
---z-popover: 1500
---z-tooltip: 1600
---z-toast: 1700
+--z-dropdown: 1000 --z-sticky: 1100 --z-fixed: 1200 --z-modal-backdrop: 1300 --z-modal: 1400
+  --z-popover: 1500 --z-tooltip: 1600 --z-toast: 1700;
 ```
 
 **Example:**
+
 ```css
 /* Modal backdrop */
 z-index: var(--z-modal-backdrop);
@@ -255,6 +244,7 @@ z-index: var(--z-modal);
 ```
 
 **Example:**
+
 ```css
 transition: transform var(--duration-200) var(--ease-out);
 animation: slide-in var(--duration-300) var(--ease-bounce);
@@ -491,10 +481,11 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
 ## 🔍 **Best Practices**
 
 1. **Use tokens instead of hard-coded values**
+
    ```css
    /* ❌ Don't */
    padding: 16px;
-   color: #39FF14;
+   color: #39ff14;
 
    /* ✅ Do */
    padding: var(--space-4);
@@ -502,6 +493,7 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
    ```
 
 2. **Use utility classes for common patterns**
+
    ```jsx
    /* ❌ Don't write custom CSS for every glow */
    <h1 style={{ textShadow: '0 0 10px #39FF14...' }}>
@@ -511,6 +503,7 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
    ```
 
 3. **Combine utilities for complex effects**
+
    ```jsx
    <div className="glass elevated-neon hover-lift transition-smooth">
      <h2 className="text-gradient-neon">Beautiful Card</h2>
@@ -522,6 +515,7 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
    - All colors meet WCAG contrast requirements
 
 5. **Use semantic tokens**
+
    ```css
    /* ❌ Less clear */
    background: var(--color-gray-950);
@@ -537,11 +531,13 @@ animation: slide-in var(--duration-300) var(--ease-bounce);
 Tokens work seamlessly with Tailwind's responsive modifiers:
 
 ```jsx
-<div className="
+<div
+  className="
   p-4 md:p-6 lg:p-8
   text-base md:text-lg lg:text-xl
   neon-glow-sm md:neon-glow-md lg:neon-glow-lg
-">
+"
+>
   Responsive neon text
 </div>
 ```
@@ -551,6 +547,7 @@ Tokens work seamlessly with Tailwind's responsive modifiers:
 ## 🎨 **Customization**
 
 To add new tokens or modify existing ones, edit:
+
 - `src/styles/tokens.css` - All design tokens
 - `src/app/globals.css` - Utility classes and effects
 

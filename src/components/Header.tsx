@@ -24,7 +24,12 @@ export function Header() {
 
           {/* CTAs + Mobile Menu */}
           <div className="flex items-center gap-3">
-            <Button href={siteConfig.ctas.primary.href} variant="primary" size="sm" className="hidden sm:inline-flex">
+            <Button
+              href={siteConfig.ctas.primary.href}
+              variant="primary"
+              size="sm"
+              className="hidden sm:inline-flex"
+            >
               {siteConfig.ctas.primary.label}
             </Button>
             <MobileMenu />

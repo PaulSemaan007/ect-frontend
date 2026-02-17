@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "../styles/tokens.css";
+@import 'tailwindcss';
+@import '../styles/tokens.css';
 
 /**
  * ECT Security Global Styles
@@ -82,7 +82,9 @@ body {
 
 .neon-border {
   border-color: var(--color-neon-primary);
-  box-shadow: 0 0 5px var(--color-neon-primary), inset 0 0 5px var(--color-neon-primary);
+  box-shadow:
+    0 0 5px var(--color-neon-primary),
+    inset 0 0 5px var(--color-neon-primary);
 }
 
 .neon-border-sm {
@@ -92,12 +94,16 @@ body {
 
 .neon-border-md {
   border-color: var(--color-neon-primary);
-  box-shadow: 0 0 8px var(--color-neon-30), inset 0 0 8px var(--color-neon-10);
+  box-shadow:
+    0 0 8px var(--color-neon-30),
+    inset 0 0 8px var(--color-neon-10);
 }
 
 .neon-border-lg {
   border-color: var(--color-neon-primary);
-  box-shadow: 0 0 15px var(--color-neon-40), inset 0 0 15px var(--color-neon-20);
+  box-shadow:
+    0 0 15px var(--color-neon-40),
+    inset 0 0 15px var(--color-neon-20);
 }
 
 /* ===================================
@@ -273,7 +279,8 @@ body {
 =================================== */
 
 @keyframes pulse-neon {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -286,7 +293,8 @@ body {
 }
 
 @keyframes glow-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: var(--shadow-neon-sm);
   }
   50% {
@@ -375,7 +383,9 @@ body {
   overflow: hidden;
   border-right: 2px solid var(--color-neon-primary);
   white-space: nowrap;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -731,8 +741,13 @@ body {
 
 /* ===== Visual Upgrade: Grid Background ===== */
 @keyframes grid-fade {
-  0%, 100% { opacity: 0.03; }
-  50% { opacity: 0.06; }
+  0%,
+  100% {
+    opacity: 0.03;
+  }
+  50% {
+    opacity: 0.06;
+  }
 }
 
 .bg-grid {
@@ -828,7 +843,9 @@ body {
 
 /* ===== Visual Upgrade: Loading Spinner ===== */
 @keyframes spin-neon {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner {
@@ -843,11 +860,15 @@ body {
 
 /* ===== Visual Upgrade: Animated Checkmark ===== */
 @keyframes checkmark-circle {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes checkmark-draw {
-  to { stroke-dashoffset: 0; }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .checkmark-animated circle {
@@ -864,8 +885,12 @@ body {
 
 /* ===== Visual Upgrade: Page Enter ===== */
 @keyframes page-enter {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 main {

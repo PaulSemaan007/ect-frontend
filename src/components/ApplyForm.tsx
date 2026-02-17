@@ -191,7 +191,13 @@ export function ApplyForm() {
       )}
 
       <Button type="submit" variant="primary" size="lg" className="w-full" disabled={submitting}>
-        {submitting ? <><span className="spinner mr-2" aria-label="Submitting" role="status" /> Submitting...</> : 'Submit Application'}
+        {submitting ? (
+          <>
+            <span className="spinner mr-2" aria-label="Submitting" role="status" /> Submitting...
+          </>
+        ) : (
+          'Submit Application'
+        )}
       </Button>
     </form>
   );

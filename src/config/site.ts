@@ -6,7 +6,8 @@
 export const siteConfig = {
   name: 'ECT Security',
   title: 'ECT Security - Event Control Team',
-  description: 'Professional security services and event management solutions across California and Nevada',
+  description:
+    'Professional security services and event management solutions across California and Nevada',
 
   // Contact Information
   contact: {
@@ -23,10 +24,7 @@ export const siteConfig = {
   },
 
   // Service Areas
-  serviceAreas: [
-    'California',
-    'Nevada',
-  ],
+  serviceAreas: ['California', 'Nevada'],
 
   // Brand Colors
   brand: {

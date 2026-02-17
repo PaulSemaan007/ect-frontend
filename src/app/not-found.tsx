@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Button, Heading } from '@/components/ui';
@@ -10,12 +9,14 @@ export default function NotFound() {
       <main className="min-h-screen flex items-center justify-center py-20">
         <Container size="md">
           <div className="text-center">
-            <div className="text-9xl font-bold text-neon neon-glow-lg mb-4 animate-glitch-slow">404</div>
+            <div className="text-9xl font-bold text-neon neon-glow-lg mb-4 animate-glitch-slow">
+              404
+            </div>
             <Heading as="h1" className="mb-4">
               Page Not Found
             </Heading>
             <p className="text-gray-400 text-lg mb-8 max-w-md mx-auto">
-              The page you're looking for doesn't exist or has been moved.
+              The page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button href="/" variant="primary" size="lg">

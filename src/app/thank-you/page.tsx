@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, Button } from '@/components/ui';
@@ -48,7 +47,7 @@ export default function ThankYouPage() {
               </Heading>
 
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                We've received your submission and will get back to you within 24 hours.
+                We&apos;ve received your submission and will get back to you within 24 hours.
               </p>
 
               <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 mb-8 max-w-md mx-auto">
@@ -60,11 +59,11 @@ export default function ThankYouPage() {
                   </li>
                   <li className="flex items-start">
                     <span className="text-neon mr-2">•</span>
-                    <span>You'll receive a confirmation email shortly</span>
+                    <span>You&apos;ll receive a confirmation email shortly</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-neon mr-2">•</span>
-                    <span>We'll contact you within 24 hours to discuss next steps</span>
+                    <span>We&apos;ll contact you within 24 hours to discuss next steps</span>
                   </li>
                 </ul>
               </div>
@@ -82,7 +81,10 @@ export default function ThankYouPage() {
                 <p className="mb-2">Need immediate assistance?</p>
                 <p className="text-foreground">
                   Call us at{' '}
-                  <a href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} className="text-neon hover:underline">
+                  <a
+                    href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`}
+                    className="text-neon hover:underline"
+                  >
                     {siteConfig.contact.phone}
                   </a>
                 </p>

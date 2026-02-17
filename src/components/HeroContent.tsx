@@ -56,11 +56,7 @@ export function HeroContent({ headline, subheadline, ctaLabel, ctaUrl }: HeroCon
           animate="visible"
         >
           {words.map((word, i) => (
-            <motion.span
-              key={i}
-              className="inline-block mr-[0.3em]"
-              variants={wordReveal}
-            >
+            <motion.span key={i} className="inline-block mr-[0.3em]" variants={wordReveal}>
               {word}
             </motion.span>
           ))}
@@ -73,7 +69,12 @@ export function HeroContent({ headline, subheadline, ctaLabel, ctaUrl }: HeroCon
           className="text-lg sm:text-xl lg:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ type: 'spring', stiffness: 80, damping: 16, delay: words.length * 0.08 + 0.3 }}
+          transition={{
+            type: 'spring',
+            stiffness: 80,
+            damping: 16,
+            delay: words.length * 0.08 + 0.3,
+          }}
         >
           {subheadline}
         </motion.p>
@@ -84,7 +85,12 @@ export function HeroContent({ headline, subheadline, ctaLabel, ctaUrl }: HeroCon
         className="flex flex-col sm:flex-row items-center justify-center gap-4"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ type: 'spring', stiffness: 100, damping: 18, delay: words.length * 0.08 + 0.5 }}
+        transition={{
+          type: 'spring',
+          stiffness: 100,
+          damping: 18,
+          delay: words.length * 0.08 + 0.5,
+        }}
       >
         {ctaLabel && ctaUrl && (
           <Button href={ctaUrl} variant="primary" size="lg">

@@ -10,9 +10,9 @@
     =================================== */
 
     /* Brand Colors */
-    --color-neon-primary: #39FF14;
+    --color-neon-primary: #39ff14;
     --color-neon-dim: #2ecc11;
-    --color-neon-bright: #4DFF29;
+    --color-neon-bright: #4dff29;
     --color-neon-dark: #1fa008;
 
     /* Neutrals - Dark Theme */
@@ -74,61 +74,62 @@
     --space-0: 0;
     --space-px: 1px;
     --space-0-5: 0.125rem; /* 2px */
-    --space-1: 0.25rem;    /* 4px */
+    --space-1: 0.25rem; /* 4px */
     --space-1-5: 0.375rem; /* 6px */
-    --space-2: 0.5rem;     /* 8px */
+    --space-2: 0.5rem; /* 8px */
     --space-2-5: 0.625rem; /* 10px */
-    --space-3: 0.75rem;    /* 12px */
+    --space-3: 0.75rem; /* 12px */
     --space-3-5: 0.875rem; /* 14px */
-    --space-4: 1rem;       /* 16px */
-    --space-5: 1.25rem;    /* 20px */
-    --space-6: 1.5rem;     /* 24px */
-    --space-7: 1.75rem;    /* 28px */
-    --space-8: 2rem;       /* 32px */
-    --space-9: 2.25rem;    /* 36px */
-    --space-10: 2.5rem;    /* 40px */
-    --space-11: 2.75rem;   /* 44px */
-    --space-12: 3rem;      /* 48px */
-    --space-14: 3.5rem;    /* 56px */
-    --space-16: 4rem;      /* 64px */
-    --space-20: 5rem;      /* 80px */
-    --space-24: 6rem;      /* 96px */
-    --space-28: 7rem;      /* 112px */
-    --space-32: 8rem;      /* 128px */
-    --space-36: 9rem;      /* 144px */
-    --space-40: 10rem;     /* 160px */
-    --space-44: 11rem;     /* 176px */
-    --space-48: 12rem;     /* 192px */
-    --space-52: 13rem;     /* 208px */
-    --space-56: 14rem;     /* 224px */
-    --space-60: 15rem;     /* 240px */
-    --space-64: 16rem;     /* 256px */
-    --space-72: 18rem;     /* 288px */
-    --space-80: 20rem;     /* 320px */
-    --space-96: 24rem;     /* 384px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+    --space-7: 1.75rem; /* 28px */
+    --space-8: 2rem; /* 32px */
+    --space-9: 2.25rem; /* 36px */
+    --space-10: 2.5rem; /* 40px */
+    --space-11: 2.75rem; /* 44px */
+    --space-12: 3rem; /* 48px */
+    --space-14: 3.5rem; /* 56px */
+    --space-16: 4rem; /* 64px */
+    --space-20: 5rem; /* 80px */
+    --space-24: 6rem; /* 96px */
+    --space-28: 7rem; /* 112px */
+    --space-32: 8rem; /* 128px */
+    --space-36: 9rem; /* 144px */
+    --space-40: 10rem; /* 160px */
+    --space-44: 11rem; /* 176px */
+    --space-48: 12rem; /* 192px */
+    --space-52: 13rem; /* 208px */
+    --space-56: 14rem; /* 224px */
+    --space-60: 15rem; /* 240px */
+    --space-64: 16rem; /* 256px */
+    --space-72: 18rem; /* 288px */
+    --space-80: 20rem; /* 320px */
+    --space-96: 24rem; /* 384px */
 
     /* ===================================
        TYPOGRAPHY
     =================================== */
 
     /* Font Families */
-    --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    --font-mono: var(--font-geist-mono), "SF Mono", "Courier New", monospace;
+    --font-sans:
+      var(--font-geist-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: var(--font-geist-mono), 'SF Mono', 'Courier New', monospace;
 
     /* Font Sizes - Type Scale 1.25 (Major Third) */
-    --text-xs: 0.75rem;      /* 12px */
-    --text-sm: 0.875rem;     /* 14px */
-    --text-base: 1rem;       /* 16px */
-    --text-lg: 1.125rem;     /* 18px */
-    --text-xl: 1.25rem;      /* 20px */
-    --text-2xl: 1.5rem;      /* 24px */
-    --text-3xl: 1.875rem;    /* 30px */
-    --text-4xl: 2.25rem;     /* 36px */
-    --text-5xl: 3rem;        /* 48px */
-    --text-6xl: 3.75rem;     /* 60px */
-    --text-7xl: 4.5rem;      /* 72px */
-    --text-8xl: 6rem;        /* 96px */
-    --text-9xl: 8rem;        /* 128px */
+    --text-xs: 0.75rem; /* 12px */
+    --text-sm: 0.875rem; /* 14px */
+    --text-base: 1rem; /* 16px */
+    --text-lg: 1.125rem; /* 18px */
+    --text-xl: 1.25rem; /* 20px */
+    --text-2xl: 1.5rem; /* 24px */
+    --text-3xl: 1.875rem; /* 30px */
+    --text-4xl: 2.25rem; /* 36px */
+    --text-5xl: 3rem; /* 48px */
+    --text-6xl: 3.75rem; /* 60px */
+    --text-7xl: 4.5rem; /* 72px */
+    --text-8xl: 6rem; /* 96px */
+    --text-9xl: 8rem; /* 128px */
 
     /* Font Weights */
     --font-thin: 100;
@@ -173,9 +174,15 @@
 
     /* Neon Shadows (Glows) */
     --shadow-neon-sm: 0 0 5px var(--color-neon-primary), 0 0 10px var(--color-neon-primary);
-    --shadow-neon-md: 0 0 10px var(--color-neon-primary), 0 0 20px var(--color-neon-primary), 0 0 30px var(--color-neon-primary);
-    --shadow-neon-lg: 0 0 15px var(--color-neon-primary), 0 0 30px var(--color-neon-primary), 0 0 45px var(--color-neon-primary);
-    --shadow-neon-xl: 0 0 20px var(--color-neon-primary), 0 0 40px var(--color-neon-primary), 0 0 60px var(--color-neon-primary), 0 0 80px var(--color-neon-primary);
+    --shadow-neon-md:
+      0 0 10px var(--color-neon-primary), 0 0 20px var(--color-neon-primary),
+      0 0 30px var(--color-neon-primary);
+    --shadow-neon-lg:
+      0 0 15px var(--color-neon-primary), 0 0 30px var(--color-neon-primary),
+      0 0 45px var(--color-neon-primary);
+    --shadow-neon-xl:
+      0 0 20px var(--color-neon-primary), 0 0 40px var(--color-neon-primary),
+      0 0 60px var(--color-neon-primary), 0 0 80px var(--color-neon-primary);
 
     /* Combined Shadows (elevation + glow) */
     --shadow-elevated-neon: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 0 20px var(--color-neon-20);
@@ -194,12 +201,12 @@
 
     /* Border Radius */
     --radius-none: 0;
-    --radius-sm: 0.125rem;   /* 2px */
-    --radius-md: 0.375rem;   /* 6px */
-    --radius-lg: 0.5rem;     /* 8px */
-    --radius-xl: 0.75rem;    /* 12px */
-    --radius-2xl: 1rem;      /* 16px */
-    --radius-3xl: 1.5rem;    /* 24px */
+    --radius-sm: 0.125rem; /* 2px */
+    --radius-md: 0.375rem; /* 6px */
+    --radius-lg: 0.5rem; /* 8px */
+    --radius-xl: 0.75rem; /* 12px */
+    --radius-2xl: 1rem; /* 16px */
+    --radius-3xl: 1.5rem; /* 24px */
     --radius-full: 9999px;
 
     /* ===================================
@@ -256,22 +263,22 @@
     =================================== */
 
     /* Container Max Widths */
-    --container-xs: 20rem;    /* 320px */
-    --container-sm: 24rem;    /* 384px */
-    --container-md: 28rem;    /* 448px */
-    --container-lg: 32rem;    /* 512px */
-    --container-xl: 36rem;    /* 576px */
-    --container-2xl: 42rem;   /* 672px */
-    --container-3xl: 48rem;   /* 768px */
-    --container-4xl: 56rem;   /* 896px */
-    --container-5xl: 64rem;   /* 1024px */
-    --container-6xl: 72rem;   /* 1152px */
-    --container-7xl: 80rem;   /* 1280px */
+    --container-xs: 20rem; /* 320px */
+    --container-sm: 24rem; /* 384px */
+    --container-md: 28rem; /* 448px */
+    --container-lg: 32rem; /* 512px */
+    --container-xl: 36rem; /* 576px */
+    --container-2xl: 42rem; /* 672px */
+    --container-3xl: 48rem; /* 768px */
+    --container-4xl: 56rem; /* 896px */
+    --container-5xl: 64rem; /* 1024px */
+    --container-6xl: 72rem; /* 1152px */
+    --container-7xl: 80rem; /* 1280px */
 
     /* Common Sizes */
-    --size-header: 5rem;      /* 80px */
-    --size-footer: 20rem;     /* 320px */
-    --size-sidebar: 16rem;    /* 256px */
+    --size-header: 5rem; /* 80px */
+    --size-footer: 20rem; /* 320px */
+    --size-sidebar: 16rem; /* 256px */
 
     /* ===================================
        EFFECTS
@@ -319,8 +326,16 @@
 
     /* Preset Gradients */
     --gradient-neon-dark: linear-gradient(135deg, var(--color-neon-10) 0%, transparent 50%);
-    --gradient-neon-radial: radial-gradient(circle at top right, var(--color-neon-10), transparent 50%);
-    --gradient-dark-to-darker: linear-gradient(to bottom, var(--color-gray-900), var(--color-gray-950));
+    --gradient-neon-radial: radial-gradient(
+      circle at top right,
+      var(--color-neon-10),
+      transparent 50%
+    );
+    --gradient-dark-to-darker: linear-gradient(
+      to bottom,
+      var(--color-gray-900),
+      var(--color-gray-950)
+    );
     --gradient-overlay-dark: linear-gradient(to bottom, transparent, var(--color-bg-90));
   }
 }

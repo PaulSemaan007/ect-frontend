@@ -1,10 +1,18 @@
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
+import {
+  Container,
+  Section,
+  Heading,
+  Button,
+  AnimateOnScroll,
+  SectionDivider,
+} from '@/components/ui';
 
 export const metadata = {
   title: 'Careers - Join ECT Security',
-  description: 'Join our team of professional security guards. Licensed positions available across California and Nevada.',
+  description:
+    'Join our team of professional security guards. Licensed positions available across California and Nevada.',
 };
 
 export default function CareersPage() {
@@ -19,7 +27,7 @@ export default function CareersPage() {
                 Join the ECT Security Team
               </Heading>
               <p className="text-xl text-gray-300 mb-8">
-                We're hiring licensed security professionals across California and Nevada
+                We&apos;re hiring licensed security professionals across California and Nevada
               </p>
               <Button href="/careers/apply" variant="primary" size="lg">
                 Apply Now

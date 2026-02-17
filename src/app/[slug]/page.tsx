@@ -28,36 +28,34 @@ export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
   const uri = `/${resolvedParams.slug}`;
 
+  let page;
   try {
     const data = await fetchGraphQL<PageByUriData>(PAGE_BY_URI_QUERY, { uri });
-
     if (!data.nodeByUri) {
       notFound();
     }
-
-    const page = data.nodeByUri;
-
-    return (
-      <>
-        <Header />
-        <main className="min-h-screen">
-          <Section>
-            <Container size="lg">
-              <Heading as="h1" className="mb-8">
-                {page.title}
-              </Heading>
-              <div
-                className="prose prose-invert prose-lg max-w-none"
-                dangerouslySetInnerHTML={{ __html: page.content }}
-              />
-            </Container>
-          </Section>
-        </main>
-        <Footer />
-      </>
-    );
-  } catch (error) {
-    console.error('Failed to fetch page:', error);
+    page = data.nodeByUri;
+  } catch {
     notFound();
   }
+
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen">
+        <Section>
+          <Container size="lg">
+            <Heading as="h1" className="mb-8">
+              {page.title}
+            </Heading>
+            <div
+              className="prose prose-invert prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: page.content }}
+            />
+          </Container>
+        </Section>
+      </main>
+      <Footer />
+    </>
+  );
 }

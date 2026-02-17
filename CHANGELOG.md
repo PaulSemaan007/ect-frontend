@@ -5,6 +5,7 @@ All changes to the ECT Security website are logged here.
 ## [2026-02-17] Forms & Infrastructure
 
 ### Added
+
 - Quote request form on /quote page (name, email, phone, service type, event details, attendees)
 - Careers application form on /careers/apply (experience, availability, guard card, certifications)
 - API routes: /api/quote and /api/apply (Resend email integration)
@@ -13,12 +14,14 @@ All changes to the ECT Security website are logged here.
 - Branch protection on main (requires CI pass)
 
 ### Changed
+
 - Updated Next.js from 16.0.1 to 16.1.6 (security fix)
 - Expanded Claude Code permissions for autonomous workflow
 - Made GitHub repo public (enables branch protection)
 - Fixed npm audit vulnerabilities (js-yaml, lodash)
 
 ### Infrastructure
+
 - Merged PR #2 (content overhaul) into main
 - Set WP_GRAPHQL_ENDPOINT as GitHub Actions secret
 - Added ectsecurity.com and www.ectsecurity.com as Vercel custom domains
@@ -27,6 +30,7 @@ All changes to the ECT Security website are logged here.
 ## [2026-02-16] Content Overhaul
 
 ### Changed
+
 - Updated coverage area from "Southern California" to "California and Nevada" across all pages
 - Updated phone number from placeholder to (714) 474-4788
 - Replaced homepage trust indicators: CA & NV Licensed, Trained Guards, Parking Assistance (was: 24/7, Licensed Guards, 6 Counties, Expert Team)
@@ -41,6 +45,7 @@ All changes to the ECT Security website are logged here.
 - Updated Services page metadata
 
 ### Added
+
 - Parking Assistance service (listing card + detail page at /services/parking)
 - CLAUDE.md project guide for autonomous development
 - CHANGELOG.md for tracking all changes
@@ -48,6 +53,7 @@ All changes to the ECT Security website are logged here.
 - Prettier code formatter (.prettierrc)
 
 ### Removed
+
 - Case Studies page (/case-studies)
 - Blog pages (/blog and /blog/[slug])
 - Licenses page (/licenses)

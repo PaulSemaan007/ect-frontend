@@ -44,7 +44,8 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
 
   return (
     <span ref={ref}>
-      {count}{suffix}
+      {count}
+      {suffix}
     </span>
   );
 }

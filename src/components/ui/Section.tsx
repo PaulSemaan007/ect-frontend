@@ -14,15 +14,7 @@ export function Section({
   containerSize = 'xl',
   withContainer = true,
 }: SectionProps) {
-  const content = withContainer ? (
-    <Container size={containerSize}>{children}</Container>
-  ) : (
-    children
-  );
+  const content = withContainer ? <Container size={containerSize}>{children}</Container> : children;
 
-  return (
-    <section className={`py-16 sm:py-20 lg:py-24 ${className}`}>
-      {content}
-    </section>
-  );
+  return <section className={`py-16 sm:py-20 lg:py-24 ${className}`}>{content}</section>;
 }
