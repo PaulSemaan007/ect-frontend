@@ -100,7 +100,7 @@
 - [x] Add tests for QuoteForm and ApplyForm validation
 - [x] Add tests for API routes (quote, apply) with mocked Resend
 - [x] Remove unused Badge variants to reduce bundle size
-- [ ] Add Lighthouse CI to GitHub Actions
+- [x] Add Lighthouse CI to GitHub Actions
 
 ### Tier 5 — Content & UX Polish
 
