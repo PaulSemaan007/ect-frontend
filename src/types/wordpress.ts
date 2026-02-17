@@ -14,7 +14,7 @@ export interface HomeHeroFields {
   subheadline: string;
   ctaLabel: string;
   ctaUrl: string;
-  backgroundImage: BackgroundImage;
+  backgroundImage: BackgroundImage | null;
 }
 
 export interface HomePageData {
