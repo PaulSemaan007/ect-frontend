@@ -55,7 +55,7 @@ export function HomeServices() {
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0 }}
           transition={{ type: 'spring', stiffness: 100, damping: 20 }}
         >
           <Heading as="h2" gradient className="mb-4">
@@ -72,7 +72,7 @@ export function HomeServices() {
               key={service.href}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0 }}
               transition={{
                 type: 'spring',
                 stiffness: 100,
