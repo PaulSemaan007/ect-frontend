@@ -278,29 +278,65 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </main>
       <Footer />
 
-      {/* BreadcrumbList structured data */}
+      {/* Structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://ectsecurity.com' },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Services',
-                item: 'https://ectsecurity.com/services',
+          __html: JSON.stringify([
+            {
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  name: 'Home',
+                  item: 'https://ectsecurity.com',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  name: 'Services',
+                  item: 'https://ectsecurity.com/services',
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  name: service.title,
+                  item: `https://ectsecurity.com/services/${resolvedParams.service}`,
+                },
+              ],
+            },
+            {
+              '@context': 'https://schema.org',
+              '@type': 'Service',
+              name: service.title,
+              description: service.description,
+              url: `https://ectsecurity.com/services/${resolvedParams.service}`,
+              provider: {
+                '@type': 'LocalBusiness',
+                name: 'ECT Security',
+                url: 'https://ectsecurity.com',
+                telephone: siteConfig.contact.phone,
+                email: siteConfig.contact.email,
               },
-              {
-                '@type': 'ListItem',
-                position: 3,
+              areaServed: siteConfig.serviceAreas.map((area) => ({
+                '@type': 'State',
+                name: area,
+              })),
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
                 name: service.title,
-                item: `https://ectsecurity.com/services/${resolvedParams.service}`,
+                itemListElement: service.features.map((feature) => ({
+                  '@type': 'Offer',
+                  itemOffered: {
+                    '@type': 'Service',
+                    name: feature,
+                  },
+                })),
               },
-            ],
-          }),
+            },
+          ]),
         }}
       />
     </>
