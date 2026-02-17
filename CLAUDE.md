@@ -114,7 +114,7 @@
 - [x] Add Organization JSON-LD schema to about page
 - [x] Add Header/Footer/Hero component tests
 - [ ] Add E2E smoke test for homepage with Playwright
-- [ ] Improve meta descriptions on all pages for keyword targeting
+- [x] Improve meta descriptions on all pages for keyword targeting
 
 ## Parked — Needs Boss Input
 

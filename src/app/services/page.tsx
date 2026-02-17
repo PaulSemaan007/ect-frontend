@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Header } from '@/components/Header';
@@ -12,10 +13,11 @@ import {
 } from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
-export const metadata = {
-  title: 'Security Services - ECT Security',
+export const metadata: Metadata = {
+  title: 'Security Services for Events, Venues & Corporate',
   description:
-    'Professional security services for events, venues, and corporate clients across California and Nevada',
+    'Professional event security, venue protection, corporate security, and parking assistance across California and Nevada. Licensed guards and crowd management specialists.',
+  alternates: { canonical: '/services' },
 };
 
 const services = [

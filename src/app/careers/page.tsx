@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import {
@@ -9,10 +10,11 @@ import {
   SectionDivider,
 } from '@/components/ui';
 
-export const metadata = {
-  title: 'Careers - Join ECT Security',
+export const metadata: Metadata = {
+  title: 'Security Guard Jobs in California & Nevada',
   description:
-    'Join our team of professional security guards. Licensed positions available across California and Nevada.',
+    'Join ECT Security as a licensed security guard. Competitive pay, flexible scheduling, and professional training. Now hiring across California and Nevada.',
+  alternates: { canonical: '/careers' },
 };
 
 export default function CareersPage() {

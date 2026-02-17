@@ -2,6 +2,15 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] SEO Meta Descriptions
+
+### Changed
+
+- Improved meta descriptions with keyword-rich copy on: /services, /careers, /careers/apply, /quote, /thank-you
+- Added typed `Metadata` exports and canonical URLs to 5 pages missing them
+- Added `robots: { index: false }` on /thank-you to prevent indexing
+- Titles use keyword-forward phrasing (e.g., "Security Guard Jobs in California & Nevada" vs generic "Careers - Join ECT Security")
+
 ## [2026-02-17] Component Tests
 
 ### Added

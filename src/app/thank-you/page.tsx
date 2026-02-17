@@ -1,11 +1,14 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, Button } from '@/components/ui';
 import { siteConfig } from '@/config/site';
 
-export const metadata = {
-  title: 'Thank You - ECT Security',
-  description: 'Thank you for contacting ECT Security',
+export const metadata: Metadata = {
+  title: 'Thank You',
+  description:
+    'Thank you for contacting ECT Security. We will review your request and respond within one business day.',
+  robots: { index: false },
 };
 
 export default function ThankYouPage() {
