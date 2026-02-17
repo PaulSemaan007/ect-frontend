@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/careers',
     '/careers/apply',
     '/service-area',
+    '/faq',
     '/privacy',
     '/terms',
   ];

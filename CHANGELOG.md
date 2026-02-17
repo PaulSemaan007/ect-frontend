@@ -2,6 +2,19 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Conversion & Business Growth
+
+### Added
+
+- FAQ page at `/faq` with 10 common security service questions and FAQ structured data (FAQPage schema for Google rich snippets)
+- Floating mobile CTA: sticky "Get a Free Quote" button appears on scroll (hidden on quote/apply pages, desktop)
+- FAQ link added to footer navigation and sitemap
+
+### Changed
+
+- Enhanced service area page with specific city lists: 26 California cities across 3 regions (Southern, Central, Northern) and 6 Nevada cities
+- Improved service area page layout with region cards, services grid, and better CTA section
+
 ## [2026-02-17] Performance & Security
 
 ### Added

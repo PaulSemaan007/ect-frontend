@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { GridBackground } from '@/components/ui/GridBackground';
 import { SmoothScrollProvider } from '@/lib/smooth-scroll';
+import { FloatingCTA } from '@/components/FloatingCTA';
 import './globals.css';
 
 const geistSans = Geist({
@@ -99,6 +100,7 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <GridBackground>{children}</GridBackground>
         </SmoothScrollProvider>
+        <FloatingCTA />
       </body>
     </html>
   );
