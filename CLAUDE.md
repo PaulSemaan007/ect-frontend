@@ -116,6 +116,13 @@
 - [ ] Add E2E smoke test for homepage with Playwright
 - [x] Improve meta descriptions on all pages for keyword targeting
 
+### Tier 7 — Internal Linking & Security Hardening
+
+- [x] Add related services cross-links on service detail pages
+- [x] Add Content Security Policy (CSP) header
+- [ ] Add E2E smoke test for homepage with Playwright
+- [ ] Add Google Search Console verification meta tag (needs verification code)
+
 ## Parked — Needs Boss Input
 
 - [ ] Resend API key (get from resend.com dashboard)
