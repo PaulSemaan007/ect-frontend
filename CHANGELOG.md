@@ -2,6 +2,25 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Code Quality & Testing
+
+### Added
+
+- QuoteForm validation tests: renders fields, validates required fields, tests successful submission, tests error handling (4 tests)
+- ApplyForm validation tests: renders fields, validates required fields, tests successful submission, tests error handling (4 tests)
+- API route tests for /api/quote: validates required fields (400), missing API key (500), successful submission (200), missing email/serviceType (5 tests)
+- API route tests for /api/apply: validates required fields (400), missing API key (500), successful submission (200), missing experience/details (5 tests)
+- @testing-library/user-event for form interaction testing
+- Explicit cleanup in vitest.setup.ts for DOM cleanup between tests
+
+### Removed
+
+- Unused Badge preset components: NewBadge, FeaturedBadge, PopularBadge, TwentyFourSevenBadge, LiveBadge, OnlineBadge, OfflineBadge (none were imported anywhere)
+
+### Changed
+
+- Test count: 13 → 31 tests across 7 test files
+
 ## [2026-02-17] Conversion & Business Growth
 
 ### Added
