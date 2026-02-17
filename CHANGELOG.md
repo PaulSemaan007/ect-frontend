@@ -2,6 +2,13 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Internal Linking & Security Hardening
+
+### Added
+
+- Related services cross-links on each service detail page (shows the other 3 services with title and description)
+- Content Security Policy (CSP) header restricting script/style/img/font/connect sources to 'self', preventing XSS from external sources
+
 ## [2026-02-17] SEO Meta Descriptions
 
 ### Changed

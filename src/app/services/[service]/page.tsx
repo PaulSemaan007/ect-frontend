@@ -242,6 +242,35 @@ export default async function ServicePage({ params }: ServicePageProps) {
 
         <SectionDivider variant="gradient" />
 
+        {/* Related Services */}
+        <Section>
+          <Container>
+            <AnimateOnScroll direction="up">
+              <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                Related Services
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {Object.entries(serviceContent)
+                  .filter(([key]) => key !== resolvedParams.service)
+                  .map(([key, svc]) => (
+                    <Link
+                      key={key}
+                      href={`/services/${key}`}
+                      className="block p-6 bg-gray-900 border border-gray-800 rounded-xl hover:border-neon/50 transition-colors group"
+                    >
+                      <h3 className="font-semibold text-foreground group-hover:text-neon transition-colors mb-2">
+                        {svc.title}
+                      </h3>
+                      <p className="text-gray-400 text-sm line-clamp-2">{svc.description}</p>
+                    </Link>
+                  ))}
+              </div>
+            </AnimateOnScroll>
+          </Container>
+        </Section>
+
+        <SectionDivider variant="gradient" />
+
         {/* CTA */}
         <Section>
           <Container>
