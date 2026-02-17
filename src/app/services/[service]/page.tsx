@@ -1,8 +1,16 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
 import { siteConfig } from '@/config/site';
+
+const serviceImages: Record<string, { src: string; alt: string }> = {
+  events: { src: '/images/services-event.png', alt: 'Large outdoor event secured by ECT Security' },
+  venues: { src: '/images/services-corporate.png', alt: 'Venue entrance secured by ECT Security' },
+  corporate: { src: '/images/services-corporate.png', alt: 'Corporate facility secured by ECT Security' },
+  parking: { src: '/images/services-event.png', alt: 'Event parking managed by ECT Security' },
+};
 
 const serviceContent: Record<string, {
   title: string;
@@ -97,9 +105,21 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <Header />
       <main className="min-h-screen">
         {/* Hero */}
-        <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
+        <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src={serviceImages[resolvedParams.service]?.src || '/images/services-event.png'}
+              alt={serviceImages[resolvedParams.service]?.alt || 'ECT Security services'}
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-950/85 via-gray-950/70 to-gray-950/85" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-neon/5 via-transparent to-transparent" />
+          </div>
           <Container size="lg">
-            <div className="max-w-3xl">
+            <div className="relative z-10 max-w-3xl py-20">
               <Heading as="h1" gradient className="mb-6">
                 {service.title}
               </Heading>
@@ -108,7 +128,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               </p>
             </div>
           </Container>
-        </Section>
+        </section>
 
         <SectionDivider variant="gradient" />
 

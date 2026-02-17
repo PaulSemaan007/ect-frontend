@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, Button, AnimateOnScroll, SectionDivider } from '@/components/ui';
@@ -12,9 +13,21 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="min-h-screen">
-        <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
+        <section className="relative min-h-[400px] lg:min-h-[500px] flex items-center justify-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/about-team.png"
+              alt="ECT Security team standing in formation"
+              fill
+              priority
+              className="object-cover"
+              sizes="100vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-950/85 via-gray-950/70 to-gray-950/85" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-neon/5 via-transparent to-transparent" />
+          </div>
           <Container>
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="relative z-10 max-w-3xl mx-auto text-center py-20">
               <Heading as="h1" gradient className="mb-6">
                 About ECT Security
               </Heading>
@@ -23,7 +36,7 @@ export default function AboutPage() {
               </p>
             </div>
           </Container>
-        </Section>
+        </section>
 
         <SectionDivider variant="gradient" />
 
