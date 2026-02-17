@@ -112,7 +112,7 @@
 
 - [x] Add Service JSON-LD schema to individual service pages
 - [x] Add Organization JSON-LD schema to about page
-- [ ] Add Header/Footer/Hero component tests
+- [x] Add Header/Footer/Hero component tests
 - [ ] Add E2E smoke test for homepage with Playwright
 - [ ] Improve meta descriptions on all pages for keyword targeting
 
