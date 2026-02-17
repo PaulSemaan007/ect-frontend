@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="min-h-screen flex items-center justify-center py-20">
+      <main id="main-content" className="min-h-screen flex items-center justify-center py-20">
         <Container size="md">
           <div className="text-center">
             <div className="text-9xl font-bold text-neon neon-glow-lg mb-4 animate-glitch-slow">

@@ -21,7 +21,7 @@ export default function CareersPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Section className="bg-gradient-to-b from-gray-900 to-gray-950">
           <Container>
             <div className="max-w-3xl mx-auto text-center">

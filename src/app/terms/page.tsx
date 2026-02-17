@@ -19,7 +19,7 @@ export default function TermsPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen">
+      <main id="main-content" className="min-h-screen">
         <Section>
           <Container size="md">
             <Heading as="h1" className="mb-4">
