@@ -2,6 +2,14 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Content & UX Polish
+
+### Added
+
+- Breadcrumb navigation on service detail pages (Home > Services > [Service]) with accessible `aria-label` markup
+- "Back to All Services" link on individual service pages below the CTA section
+- BreadcrumbList JSON-LD structured data on service pages for Google breadcrumb rich results
+
 ## [2026-02-17] Code Quality & Testing
 
 ### Added
