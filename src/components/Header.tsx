@@ -1,8 +1,12 @@
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import { siteConfig } from '@/config/site';
 import { Button } from './ui';
 import { NavLinks } from './NavLinks';
-import { MobileMenu } from './MobileMenu';
+
+const MobileMenu = dynamic(() =>
+  import('./MobileMenu').then((mod) => ({ default: mod.MobileMenu })),
+);
 
 export function Header() {
   return (

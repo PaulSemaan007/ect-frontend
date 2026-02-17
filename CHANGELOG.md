@@ -2,6 +2,15 @@
 
 All changes to the ECT Security website are logged here.
 
+## [2026-02-17] Performance & Security
+
+### Added
+
+- Dynamic imports for HomeServices, StatsCounter, WhyECT (page.tsx) and MobileMenu (Header.tsx)
+- Loading skeleton (`loading.tsx`) for service detail pages
+- Hero image preload in layout `<head>` for improved LCP
+- Security headers via `next.config.ts`: X-Frame-Options (DENY), X-Content-Type-Options (nosniff), Referrer-Policy, HSTS, Permissions-Policy, X-DNS-Prefetch-Control
+
 ## [2026-02-17] SEO Foundations
 
 ### Added

@@ -1,13 +1,21 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { fetchGraphQL } from '@/lib/graphql-client';
 import type { HomePageData, HomeHeroFields } from '@/types/wordpress';
 import { Hero } from '@/components/Hero';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
-import { HomeServices } from '@/components/HomeServices';
-import { StatsCounter } from '@/components/StatsCounter';
-import { WhyECT } from '@/components/WhyECT';
 import { SectionDivider, Section, Container, Heading, Button } from '@/components/ui';
+
+const HomeServices = dynamic(() =>
+  import('@/components/HomeServices').then((mod) => ({ default: mod.HomeServices })),
+);
+const StatsCounter = dynamic(() =>
+  import('@/components/StatsCounter').then((mod) => ({ default: mod.StatsCounter })),
+);
+const WhyECT = dynamic(() =>
+  import('@/components/WhyECT').then((mod) => ({ default: mod.WhyECT })),
+);
 
 export const metadata: Metadata = {
   title: 'Professional Event Security Across California & Nevada',
