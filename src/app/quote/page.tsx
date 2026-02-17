@@ -1,12 +1,15 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, AnimateOnScroll } from '@/components/ui';
 import { QuoteForm } from '@/components/QuoteForm';
 import { siteConfig } from '@/config/site';
 
-export const metadata = {
-  title: 'Get a Quote - ECT Security',
-  description: 'Request a custom security quote for your event or venue',
+export const metadata: Metadata = {
+  title: 'Get a Free Security Quote',
+  description:
+    'Request a free, custom security quote for your event, venue, or facility. ECT Security provides licensed guards across California and Nevada.',
+  alternates: { canonical: '/quote' },
 };
 
 export default function QuotePage() {

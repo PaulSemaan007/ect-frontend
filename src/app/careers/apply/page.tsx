@@ -1,12 +1,15 @@
+import type { Metadata } from 'next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Container, Section, Heading, AnimateOnScroll } from '@/components/ui';
 import { ApplyForm } from '@/components/ApplyForm';
 import { siteConfig } from '@/config/site';
 
-export const metadata = {
-  title: 'Apply Now - ECT Security Careers',
-  description: 'Submit your application to join the ECT Security team',
+export const metadata: Metadata = {
+  title: 'Apply for Security Guard Positions',
+  description:
+    'Apply to become a licensed security guard with ECT Security. We provide training, competitive pay, and flexible scheduling for events, venues, and corporate sites.',
+  alternates: { canonical: '/careers/apply' },
 };
 
 export default function ApplyPage() {
