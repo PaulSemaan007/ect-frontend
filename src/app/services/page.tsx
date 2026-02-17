@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site';
 
 export const metadata = {
   title: 'Security Services - ECT Security',
-  description: 'Professional security services for events, venues, corporate, nightlife, and private clients',
+  description: 'Professional security services for events, venues, and corporate clients across California and Nevada',
 };
 
 const services = [
@@ -14,13 +14,13 @@ const services = [
     title: 'Events & Festivals',
     href: '/services/events',
     description: 'Professional crowd control and security for festivals, concerts, and large-scale events.',
-    features: ['Crowd Management', 'Access Control', 'VIP Protection', 'Emergency Response'],
+    features: ['Crowd Management', 'Access Control', 'Emergency Response'],
   },
   {
     title: 'Venue Security',
     href: '/services/venues',
     description: 'Comprehensive security solutions for theaters, arenas, and entertainment venues.',
-    features: ['Perimeter Security', 'Bag Checks', 'Incident Response', '24/7 Monitoring'],
+    features: ['Perimeter Security', 'Bag Checks', 'Incident Response'],
   },
   {
     title: 'Corporate Security',
@@ -29,16 +29,10 @@ const services = [
     features: ['Executive Protection', 'Facility Security', 'Access Management', 'Threat Assessment'],
   },
   {
-    title: 'Nightlife & Hospitality',
-    href: '/services/nightlife',
-    description: 'Specialized security for bars, clubs, and hospitality venues.',
-    features: ['Door Security', 'ID Verification', 'Conflict Resolution', 'Patron Safety'],
-  },
-  {
-    title: 'Private Security',
-    href: '/services/private',
-    description: 'Discreet personal protection and residential security services.',
-    features: ['Personal Protection', 'Residential Security', 'Risk Assessment', 'Travel Security'],
+    title: 'Parking Assistance',
+    href: '/services/parking',
+    description: 'Professional parking management and traffic direction for events, venues, and facilities.',
+    features: ['Traffic & Lot Management', 'Parking Direction', 'ADA Compliance', 'Event Parking Planning'],
   },
 ];
 
@@ -55,7 +49,7 @@ export default function ServicesPage() {
                 Professional Security Services
               </Heading>
               <p className="text-xl text-gray-300 mb-8">
-                Licensed, trained guards for events, venues, and facilities across Southern California
+                Licensed, trained guards for events, venues, and facilities across California and Nevada
               </p>
               <Button href="/quote" variant="primary" size="lg">
                 Get a Custom Quote

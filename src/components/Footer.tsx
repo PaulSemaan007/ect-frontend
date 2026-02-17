@@ -13,7 +13,7 @@ export function Footer() {
               <span className="text-foreground ml-1">Security</span>
             </div>
             <p className="text-gray-400 text-sm">
-              Professional security services across Southern California
+              Professional security services across California and Nevada
             </p>
             <div className="space-y-2 text-sm">
               <p className="text-gray-300">
@@ -26,7 +26,6 @@ export function Footer() {
                   {siteConfig.contact.email}
                 </a>
               </p>
-              <p className="text-gray-400">{siteConfig.contact.hours}</p>
             </div>
           </div>
 

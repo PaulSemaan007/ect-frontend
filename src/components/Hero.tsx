@@ -55,22 +55,18 @@ export function Hero({ data }: HeroProps) {
         </div>
 
         {/* Trust indicators */}
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+        <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8 text-center">
           <div>
-            <div className="text-3xl lg:text-4xl font-bold text-neon">24/7</div>
-            <div className="text-sm text-gray-400 mt-1">Availability</div>
+            <div className="text-3xl lg:text-4xl font-bold text-neon">CA & NV</div>
+            <div className="text-sm text-gray-400 mt-1">Licensed</div>
           </div>
           <div>
-            <div className="text-3xl lg:text-4xl font-bold text-neon">Licensed</div>
+            <div className="text-3xl lg:text-4xl font-bold text-neon">Trained</div>
             <div className="text-sm text-gray-400 mt-1">Guards</div>
           </div>
           <div>
-            <div className="text-3xl lg:text-4xl font-bold text-neon">6</div>
-            <div className="text-sm text-gray-400 mt-1">Counties</div>
-          </div>
-          <div>
-            <div className="text-3xl lg:text-4xl font-bold text-neon">Expert</div>
-            <div className="text-sm text-gray-400 mt-1">Team</div>
+            <div className="text-3xl lg:text-4xl font-bold text-neon">Parking</div>
+            <div className="text-sm text-gray-400 mt-1">Assistance</div>
           </div>
         </div>
       </div>

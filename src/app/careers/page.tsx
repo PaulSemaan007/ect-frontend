@@ -4,7 +4,7 @@ import { Container, Section, Heading, Button } from '@/components/ui';
 
 export const metadata = {
   title: 'Careers - Join ECT Security',
-  description: 'Join our team of professional security guards. Licensed positions available across Southern California.',
+  description: 'Join our team of professional security guards. Licensed positions available across California and Nevada.',
 };
 
 export default function CareersPage() {
@@ -19,7 +19,7 @@ export default function CareersPage() {
                 Join the ECT Security Team
               </Heading>
               <p className="text-xl text-gray-300 mb-8">
-                We're hiring licensed security professionals across Southern California
+                We're hiring licensed security professionals across California and Nevada
               </p>
               <Button href="/careers/apply" variant="primary" size="lg">
                 Apply Now
@@ -40,7 +40,6 @@ export default function CareersPage() {
                     'Work at premier events and venues',
                     'Professional development and training',
                     'Supportive team environment',
-                    'Opportunities for advancement',
                   ].map((benefit) => (
                     <li key={benefit} className="flex items-start text-gray-300">
                       <span className="text-neon mr-3 mt-1">✓</span>
@@ -52,7 +51,7 @@ export default function CareersPage() {
 
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">Requirements</h2>
-                <ul className="space-y-3 text-gray-300 mb-8">
+                <ul className="space-y-3 text-gray-300">
                   <li>• Must be 18 years or older</li>
                   <li>• Valid California Guard Card (or ability to obtain)</li>
                   <li>• Authorized to work in the United States</li>
@@ -60,16 +59,6 @@ export default function CareersPage() {
                   <li>• Reliable transportation</li>
                   <li>• Professional attitude and appearance</li>
                 </ul>
-
-                <div className="bg-gray-900 border border-neon/30 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-neon mb-3">Open Positions</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li>• Event Security Officers</li>
-                    <li>• Venue Security Guards</li>
-                    <li>• Crowd Control Specialists</li>
-                    <li>• VIP Protection Officers</li>
-                  </ul>
-                </div>
               </div>
             </div>
           </Container>

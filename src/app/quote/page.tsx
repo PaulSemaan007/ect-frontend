@@ -36,7 +36,6 @@ export default function QuotePage() {
                 <p className="text-foreground font-semibold">
                   Phone: <a href={`tel:${siteConfig.contact.phone.replace(/\D/g, '')}`} className="text-neon hover:underline">{siteConfig.contact.phone}</a>
                 </p>
-                <p className="text-gray-400">{siteConfig.contact.hours}</p>
               </div>
             </div>
 

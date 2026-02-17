@@ -6,13 +6,12 @@
 export const siteConfig = {
   name: 'ECT Security',
   title: 'ECT Security - Event Control Team',
-  description: 'Professional security services and event management solutions across Southern California',
+  description: 'Professional security services and event management solutions across California and Nevada',
 
   // Contact Information
   contact: {
     email: 'info@ectsecurity.com',
-    phone: '(555) 555-0199',
-    hours: '24/7',
+    phone: '(714) 474-4788',
   },
 
   // Social Media Links
@@ -23,14 +22,10 @@ export const siteConfig = {
     tiktok: 'https://tiktok.com/@ectsecurity',
   },
 
-  // Service Areas (Southern California)
+  // Service Areas
   serviceAreas: [
-    'Los Angeles County',
-    'Orange County',
-    'San Diego County',
-    'Riverside County',
-    'San Bernardino County',
-    'Ventura County',
+    'California',
+    'Nevada',
   ],
 
   // Brand Colors
@@ -58,23 +53,19 @@ export const siteConfig = {
     main: [
       { label: 'Home', href: '/' },
       { label: 'Services', href: '/services' },
-      { label: 'Case Studies', href: '/case-studies' },
       { label: 'About', href: '/about' },
       { label: 'Careers', href: '/careers' },
-      { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/quote' },
     ],
     services: [
       { label: 'Events & Festivals', href: '/services/events' },
       { label: 'Venues', href: '/services/venues' },
       { label: 'Corporate', href: '/services/corporate' },
-      { label: 'Nightlife', href: '/services/nightlife' },
-      { label: 'Private Security', href: '/services/private' },
+      { label: 'Parking Assistance', href: '/services/parking' },
     ],
     legal: [
       { label: 'Privacy Policy', href: '/privacy' },
       { label: 'Terms of Service', href: '/terms' },
-      { label: 'Licenses & Insurance', href: '/licenses' },
       { label: 'Service Area', href: '/service-area' },
     ],
   },

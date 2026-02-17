@@ -12,11 +12,10 @@ const serviceContent: Record<string, {
 }> = {
   events: {
     title: 'Events & Festivals Security',
-    description: 'Professional crowd control and security management for festivals, concerts, and large-scale events across Southern California.',
+    description: 'Professional crowd control and security management for festivals, concerts, and large-scale events across California and Nevada.',
     features: [
       'Crowd Management & Control',
       'Access Control & Ticketing',
-      'VIP & Backstage Protection',
       'Emergency Response Planning',
       'Bag Checks & Screening',
       'Perimeter Security',
@@ -34,7 +33,6 @@ const serviceContent: Record<string, {
       'Perimeter & Access Control',
       'Patron Screening & Bag Checks',
       'Incident Response & Management',
-      '24/7 Monitoring & Patrol',
       'Staff Coordination',
       'Emergency Evacuation',
     ],
@@ -61,38 +59,21 @@ const serviceContent: Record<string, {
       'Custom security plans tailored to your organization specific needs and risk profile.',
     ],
   },
-  nightlife: {
-    title: 'Nightlife & Hospitality Security',
-    description: 'Specialized security services for bars, clubs, restaurants, and hospitality venues.',
+  parking: {
+    title: 'Parking Assistance',
+    description: 'Professional parking lot management and traffic direction for events, venues, and facilities across California and Nevada.',
     features: [
-      'Door Security & ID Verification',
-      'Crowd Control',
-      'Conflict De-escalation',
-      'Patron Safety',
-      'Cash Handling Security',
-      'Closing Procedures',
+      'Traffic & Lot Management',
+      'Parking Direction & Guidance',
+      'ADA Compliance Monitoring',
+      'Valet Coordination',
+      'Event Parking Planning',
+      'Lot Security & Patrols',
     ],
     details: [
-      'Our nightlife security team is trained to maintain a safe, welcoming environment while managing the unique challenges of late-night venues.',
-      'We handle everything from ID checks and crowd control to conflict resolution and emergency response.',
-      'Professional guards who understand the balance between security and hospitality.',
-    ],
-  },
-  private: {
-    title: 'Private Security Services',
-    description: 'Discreet personal protection, residential security, and private event security.',
-    features: [
-      'Personal Protection & Bodyguards',
-      'Residential Security',
-      'Private Event Security',
-      'Travel Security',
-      'Risk Assessment',
-      'Surveillance Detection',
-    ],
-    details: [
-      'Discrete, professional security services for high-net-worth individuals, families, and private events.',
-      'Our private security specialists provide peace of mind without disrupting your lifestyle.',
-      'Customized security plans based on thorough risk assessment and your specific needs.',
+      'Our parking assistance team ensures smooth traffic flow and organized parking for events of all sizes.',
+      'We handle everything from directing vehicles and managing lots to coordinating with valet services and ensuring ADA compliance.',
+      'Professional staff trained in traffic management, customer service, and emergency procedures.',
     ],
   },
 };
@@ -165,7 +146,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="text-center">
               <h2 className="text-2xl font-bold text-foreground mb-4">Service Areas</h2>
               <p className="text-gray-300 mb-6">
-                We provide security services throughout Southern California:
+                We provide security services throughout California and Nevada:
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 {siteConfig.serviceAreas.map((area) => (
