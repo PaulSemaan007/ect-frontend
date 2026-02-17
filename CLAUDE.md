@@ -82,10 +82,10 @@
 
 ### Tier 2 — Performance & Security
 
-- [ ] Add dynamic imports for heavy client components (HomeServices, StatsCounter, WhyECT, MobileMenu)
-- [ ] Add `loading.tsx` to service routes for instant perceived navigation
-- [ ] Optimize LCP: preload hero image in layout
-- [ ] Add security headers via next.config.ts (X-Frame-Options, CSP, Referrer-Policy)
+- [x] Add dynamic imports for heavy client components (HomeServices, StatsCounter, WhyECT, MobileMenu)
+- [x] Add `loading.tsx` to service routes for instant perceived navigation
+- [x] Optimize LCP: preload hero image in layout
+- [x] Add security headers via next.config.ts (X-Frame-Options, CSP, Referrer-Policy)
 
 ### Tier 3 — Conversion & Business Growth
 
