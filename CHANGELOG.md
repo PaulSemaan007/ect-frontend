@@ -10,6 +10,12 @@ All changes to the ECT Security website are logged here.
 - "Back to All Services" link on individual service pages below the CTA section
 - BreadcrumbList JSON-LD structured data on service pages for Google breadcrumb rich results
 
+### Changed
+
+- Rewrote Privacy Policy with 11 comprehensive sections: information collected, usage, sharing, data security, cookies, CCPA rights, third-party links, children's privacy, data retention, changes, and contact
+- Rewrote Terms of Service with 15 comprehensive sections: services overview, requests & agreements, pricing, cancellation/rescheduling, client responsibilities, scope of services, insurance & liability, employment applications, website use, intellectual property, indemnification, governing law, severability, changes, and contact
+- Both legal pages now use proper Next.js metadata with canonical URLs and reference siteConfig for contact info
+
 ## [2026-02-17] Code Quality & Testing
 
 ### Added
