@@ -15,30 +15,18 @@ vi.mock('motion/react', () => ({
 
 describe('Hero', () => {
   const defaultData = {
-    headline: 'Professional Event Security',
-    subheadline: 'Trusted across California and Nevada',
+    headline: 'ECT Security — Event Control Team',
+    subheadline: null,
     ctaLabel: 'Get a Quote',
     ctaUrl: '/quote',
-    backgroundImage: {
-      node: {
-        sourceUrl: '/images/hero-festival.png',
-        altText: 'ECT Security at a festival',
-      },
-    },
+    backgroundImage: null,
   };
 
   it('renders the headline', () => {
     render(<Hero data={defaultData} />);
 
-    expect(screen.getByText('Professional')).toBeInTheDocument();
-    expect(screen.getByText('Event')).toBeInTheDocument();
+    expect(screen.getByText('ECT')).toBeInTheDocument();
     expect(screen.getByText('Security')).toBeInTheDocument();
-  });
-
-  it('renders the subheadline', () => {
-    render(<Hero data={defaultData} />);
-
-    expect(screen.getByText('Trusted across California and Nevada')).toBeInTheDocument();
   });
 
   it('renders the primary CTA button', () => {
@@ -47,25 +35,10 @@ describe('Hero', () => {
     expect(screen.getByRole('link', { name: /get a quote/i })).toBeInTheDocument();
   });
 
-  it('renders the secondary CTA button', () => {
+  it('renders the background image with fallback', () => {
     render(<Hero data={defaultData} />);
 
-    expect(screen.getByRole('link', { name: /apply now/i })).toBeInTheDocument();
-  });
-
-  it('renders trust indicators', () => {
-    render(<Hero data={defaultData} />);
-
-    expect(screen.getByText('CA & NV')).toBeInTheDocument();
-    expect(screen.getByText('Licensed')).toBeInTheDocument();
-    expect(screen.getByText('Trained')).toBeInTheDocument();
-    expect(screen.getByText('Guards')).toBeInTheDocument();
-  });
-
-  it('renders the background image', () => {
-    render(<Hero data={defaultData} />);
-
-    const img = screen.getByAltText('ECT Security at a festival');
+    const img = screen.getByAltText('ECT Security');
     expect(img).toBeInTheDocument();
   });
 });

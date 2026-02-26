@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import { GridBackground } from '@/components/ui/GridBackground';
 import { SmoothScrollProvider } from '@/lib/smooth-scroll';
-import { FloatingCTA } from '@/components/FloatingCTA';
 import './globals.css';
 
 const geistSans = Geist({
@@ -22,31 +21,28 @@ export const metadata: Metadata = {
     default: 'ECT Security - Event Control Team',
     template: '%s | ECT Security',
   },
-  description:
-    'Professional security services and event management solutions across California and Nevada. Licensed guards, de-escalation trained.',
+  description: 'Professional security services across California and Nevada.',
   metadataBase: new URL(BASE_URL),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: BASE_URL,
     siteName: 'ECT Security',
-    title: 'ECT Security - Professional Event Security',
-    description:
-      'Professional security services across California and Nevada. Licensed guards, crowd management, and event security.',
+    title: 'ECT Security - Event Control Team',
+    description: 'Professional security services across California and Nevada.',
     images: [
       {
         url: '/images/hero-festival.png',
         width: 1200,
         height: 630,
-        alt: 'ECT Security team providing event security',
+        alt: 'ECT Security',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ECT Security - Professional Event Security',
-    description:
-      'Professional security services across California and Nevada. Licensed guards, crowd management, and event security.',
+    title: 'ECT Security - Event Control Team',
+    description: 'Professional security services across California and Nevada.',
     images: ['/images/hero-festival.png'],
   },
   alternates: {
@@ -72,21 +68,15 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'ECT Security',
-              description:
-                'Professional security services and event management solutions across California and Nevada.',
+              description: 'Professional security services across California and Nevada.',
               url: BASE_URL,
-              telephone: '+17144744788',
-              email: 'info@ectsecurity.com',
+              telephone: '+15627168376',
+              email: 'Rsemaan1@yahoo.com',
               areaServed: [
                 { '@type': 'State', name: 'California' },
                 { '@type': 'State', name: 'Nevada' },
               ],
-              serviceType: [
-                'Event Security',
-                'Venue Security',
-                'Corporate Security',
-                'Parking Assistance',
-              ],
+              serviceType: ['Security Services'],
               image: `${BASE_URL}/images/hero-festival.png`,
             }),
           }}
@@ -100,7 +90,6 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <GridBackground>{children}</GridBackground>
         </SmoothScrollProvider>
-        <FloatingCTA />
       </body>
     </html>
   );

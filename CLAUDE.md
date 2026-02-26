@@ -12,24 +12,24 @@
 ## Business Rules (MUST follow)
 
 - Coverage area: **California and Nevada** (never say "Southern California only" or "6 counties")
-- Phone: **(714) 474-4788** — use this everywhere
-- Email: info@ectsecurity.com
+- Phone: **562-716-8376** — use this everywhere
+- Email: Rsemaan1@yahoo.com
 - Do NOT claim 24/7 availability
-- Do NOT add back removed pages: Blog, Case Studies, Licenses
-- Do NOT add back removed services: VIP Protection, Nightlife & Hospitality, Private Security
+- Do NOT add back removed pages: Blog, Case Studies, Licenses, About, FAQ, Careers, Services, Privacy, Terms, Service Area
+- Do NOT add back removed services or service listings
 - Do NOT reference "24/7 Monitoring" as a service feature
+- Site is intentionally minimal: homepage + quote form only
 
-## Active Services
+## Active Pages
 
-1. Events & Festivals
-2. Venue Security
-3. Corporate Security
-4. Parking Assistance
+1. Homepage (`/`) — Hero + Contact section
+2. Quote Form (`/quote`) — Quote request form
+3. Thank You (`/thank-you`) — Form confirmation
 
 ## Key File Paths
 
 - Site config (central source of truth): `src/config/site.ts`
-- Pages: `src/app/[page]/page.tsx`
+- Homepage: `src/app/page.tsx`
 - Shared components: `src/components/Header.tsx`, `src/components/Footer.tsx`, `src/components/Hero.tsx`
 - UI components: `src/components/ui/`
 - Design tokens: `src/styles/tokens.css`
@@ -67,59 +67,12 @@
 - `npm run type-check` — TypeScript type checking
 - `npm run lint` / `npm run lint:fix` — ESLint
 - `npm run format` / `npm run format:check` — Prettier
-- `npm run screenshots` — Capture screenshots of all pages via Puppeteer
 
 ## Task Queue
 
-### Tier 1 — SEO (Critical for Google Indexing)
-
-- [x] Add `src/app/sitemap.ts` — auto-generates XML sitemap for all pages
-- [x] Add `src/app/robots.ts` — allows crawlers, points to sitemap
-- [x] Add Open Graph + Twitter Card meta tags to layout.tsx and per-page overrides
-- [x] Add JSON-LD structured data (LocalBusiness schema with phone, email, service areas)
-- [x] Add canonical URLs via Next.js metadata API
-- [x] Add `generateMetadata` to pages missing it: home, services/[service], [slug]
-
-### Tier 2 — Performance & Security
-
-- [x] Add dynamic imports for heavy client components (HomeServices, StatsCounter, WhyECT, MobileMenu)
-- [x] Add `loading.tsx` to service routes for instant perceived navigation
-- [x] Optimize LCP: preload hero image in layout
-- [x] Add security headers via next.config.ts (X-Frame-Options, CSP, Referrer-Policy)
-
-### Tier 3 — Conversion & Business Growth
-
 - [ ] Add Google Analytics 4 via @next/third-parties (needs GA_MEASUREMENT_ID env var)
-- [ ] Add conversion tracking events to form submissions
-- [x] Add FAQ page with common security service questions
-- [x] Enhance service area page with specific California/Nevada city lists
-- [x] Add "Request Callback" floating CTA or sticky mobile CTA
-
-### Tier 4 — Code Quality & Testing
-
-- [x] Add tests for QuoteForm and ApplyForm validation
-- [x] Add tests for API routes (quote, apply) with mocked Resend
-- [x] Remove unused Badge variants to reduce bundle size
-- [x] Add Lighthouse CI to GitHub Actions
-
-### Tier 5 — Content & UX Polish
-
-- [x] Improve privacy/terms pages with professional legal copy
-- [x] Add breadcrumb navigation to service detail pages
-- [x] Add "Back to Services" link on individual service pages
-
-### Tier 6 — Schema & SEO Enrichment
-
-- [x] Add Service JSON-LD schema to individual service pages
-- [x] Add Organization JSON-LD schema to about page
-- [x] Add Header/Footer/Hero component tests
-- [ ] Add E2E smoke test for homepage with Playwright
-- [x] Improve meta descriptions on all pages for keyword targeting
-
-### Tier 7 — Internal Linking & Security Hardening
-
-- [x] Add related services cross-links on service detail pages
-- [x] Add Content Security Policy (CSP) header
+- [ ] Add conversion tracking to quote form submission
+- [ ] Replace hero image with preferred photo
 - [ ] Add E2E smoke test for homepage with Playwright
 - [ ] Add Google Search Console verification meta tag (needs verification code)
 
@@ -127,10 +80,7 @@
 
 - [ ] Resend API key (get from resend.com dashboard)
 - [ ] Google Analytics measurement ID
-- [ ] Real team photos (replace AI-generated)
-- [ ] Real testimonials / client logos
-- [ ] Real stats for counters (events secured, years in business)
+- [ ] Preferred hero photo (replace current one)
 - [ ] Business hours
 - [ ] Company address
-- [ ] Specific Nevada cities served
 - [ ] Social media URL verification

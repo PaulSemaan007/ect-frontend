@@ -2,7 +2,6 @@
 
 import { motion } from 'motion/react';
 import { Button } from './ui';
-import { siteConfig } from '@/config/site';
 
 interface HeroContentProps {
   headline?: string;
@@ -10,12 +9,6 @@ interface HeroContentProps {
   ctaLabel?: string;
   ctaUrl?: string;
 }
-
-const trustIndicators = [
-  { value: 'CA & NV', label: 'Licensed' },
-  { value: 'Trained', label: 'Guards' },
-  { value: 'Parking', label: 'Assistance' },
-];
 
 const container = {
   hidden: { opacity: 0 },
@@ -80,49 +73,24 @@ export function HeroContent({ headline, subheadline, ctaLabel, ctaUrl }: HeroCon
         </motion.p>
       )}
 
-      {/* Buttons scale in */}
-      <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          type: 'spring',
-          stiffness: 100,
-          damping: 18,
-          delay: words.length * 0.08 + 0.5,
-        }}
-      >
-        {ctaLabel && ctaUrl && (
+      {/* CTA Button */}
+      {ctaLabel && ctaUrl && (
+        <motion.div
+          className="flex items-center justify-center"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: 'spring',
+            stiffness: 100,
+            damping: 18,
+            delay: words.length * 0.08 + 0.5,
+          }}
+        >
           <Button href={ctaUrl} variant="primary" size="lg">
             {ctaLabel}
           </Button>
-        )}
-        <Button href={siteConfig.ctas.secondary.href} variant="outline" size="lg">
-          {siteConfig.ctas.secondary.label}
-        </Button>
-      </motion.div>
-
-      {/* Trust indicators with stagger */}
-      <div className="mt-16 grid grid-cols-3 gap-6 lg:gap-8 text-center">
-        {trustIndicators.map((indicator, i) => (
-          <motion.div
-            key={indicator.value}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              type: 'spring',
-              stiffness: 100,
-              damping: 16,
-              delay: words.length * 0.08 + 0.7 + i * 0.15,
-            }}
-          >
-            <div className="text-3xl lg:text-4xl font-bold text-neon neon-glow-sm">
-              {indicator.value}
-            </div>
-            <div className="text-sm text-gray-400 mt-1">{indicator.label}</div>
-          </motion.div>
-        ))}
-      </div>
+        </motion.div>
+      )}
     </div>
   );
 }

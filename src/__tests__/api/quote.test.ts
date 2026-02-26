@@ -21,8 +21,8 @@ describe('POST /api/quote', () => {
     name: 'John Smith',
     email: 'john@example.com',
     phone: '5551234567',
-    serviceType: 'events',
-    details: 'Need security for my event',
+    serviceType: 'unarmed-guard',
+    details: 'Need security for my site',
   };
 
   it('returns 400 when required fields are missing', async () => {

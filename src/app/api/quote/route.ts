@@ -9,10 +9,9 @@ export async function POST(request: Request) {
       phone,
       company,
       serviceType,
-      eventName,
-      eventDate,
-      eventLocation,
-      estimatedAttendees,
+      projectName,
+      serviceDate,
+      location,
       details,
     } = body;
 
@@ -21,11 +20,7 @@ export async function POST(request: Request) {
     }
 
     const serviceLabels: Record<string, string> = {
-      events: 'Events & Festivals',
-      venues: 'Venue Security',
-      corporate: 'Corporate Security',
-      parking: 'Parking Assistance',
-      multiple: 'Multiple Services',
+      'unarmed-guard': 'Unarmed Guard Services',
       other: 'Other',
     };
 
@@ -40,7 +35,7 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: 'ECT Security <quotes@ectsecurity.com>',
-      to: ['info@ectsecurity.com'],
+      to: ['Rsemaan1@yahoo.com'],
       replyTo: email,
       subject: `New Quote Request: ${serviceLabels[serviceType] || serviceType} — ${name}`,
       html: `
@@ -52,12 +47,11 @@ export async function POST(request: Request) {
         <p><strong>Phone:</strong> ${phone}</p>
         ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
         <hr />
-        <h3>Event Details</h3>
+        <h3>Service Details</h3>
         <p><strong>Service Type:</strong> ${serviceLabels[serviceType] || serviceType}</p>
-        ${eventName ? `<p><strong>Event Name:</strong> ${eventName}</p>` : ''}
-        ${eventDate ? `<p><strong>Event Date:</strong> ${eventDate}</p>` : ''}
-        ${eventLocation ? `<p><strong>Location:</strong> ${eventLocation}</p>` : ''}
-        ${estimatedAttendees ? `<p><strong>Estimated Attendees:</strong> ${estimatedAttendees}</p>` : ''}
+        ${projectName ? `<p><strong>Project/Site:</strong> ${projectName}</p>` : ''}
+        ${serviceDate ? `<p><strong>Service Date:</strong> ${serviceDate}</p>` : ''}
+        ${location ? `<p><strong>Location:</strong> ${location}</p>` : ''}
         <hr />
         <h3>Additional Details</h3>
         <p>${details.replace(/\n/g, '<br />')}</p>

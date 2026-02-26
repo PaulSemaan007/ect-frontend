@@ -11,10 +11,9 @@ type QuoteFormData = {
   phone: string;
   company: string;
   serviceType: string;
-  eventName: string;
-  eventDate: string;
-  eventLocation: string;
-  estimatedAttendees: string;
+  projectName: string;
+  serviceDate: string;
+  location: string;
   details: string;
 };
 
@@ -128,11 +127,7 @@ export function QuoteForm() {
           {...register('serviceType', { required: 'Please select a service type' })}
         >
           <option value="">Select a service...</option>
-          <option value="events">Events & Festivals</option>
-          <option value="venues">Venue Security</option>
-          <option value="corporate">Corporate Security</option>
-          <option value="parking">Parking Assistance</option>
-          <option value="multiple">Multiple Services</option>
+          <option value="unarmed-guard">Unarmed Guard Services</option>
           <option value="other">Other</option>
         </select>
         {errors.serviceType && <p className={errorStyles}>{errors.serviceType.message}</p>}
@@ -140,54 +135,41 @@ export function QuoteForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="eventName" className={labelStyles}>
-            Event Name
+          <label htmlFor="projectName" className={labelStyles}>
+            Project / Site Name
           </label>
           <input
-            id="eventName"
+            id="projectName"
             type="text"
             className={inputStyles}
-            placeholder="Event name"
-            {...register('eventName')}
+            placeholder="Project or site name"
+            {...register('projectName')}
           />
         </div>
 
         <div>
-          <label htmlFor="eventDate" className={labelStyles}>
-            Event Date
-          </label>
-          <input id="eventDate" type="date" className={inputStyles} {...register('eventDate')} />
-        </div>
-
-        <div>
-          <label htmlFor="eventLocation" className={labelStyles}>
-            Event Location
+          <label htmlFor="serviceDate" className={labelStyles}>
+            Service Date
           </label>
           <input
-            id="eventLocation"
-            type="text"
+            id="serviceDate"
+            type="date"
             className={inputStyles}
-            placeholder="City, State or venue name"
-            {...register('eventLocation')}
+            {...register('serviceDate')}
           />
         </div>
 
-        <div>
-          <label htmlFor="estimatedAttendees" className={labelStyles}>
-            Estimated Attendees
+        <div className="sm:col-span-2">
+          <label htmlFor="location" className={labelStyles}>
+            Location
           </label>
-          <select
-            id="estimatedAttendees"
+          <input
+            id="location"
+            type="text"
             className={inputStyles}
-            {...register('estimatedAttendees')}
-          >
-            <option value="">Select range...</option>
-            <option value="under-100">Under 100</option>
-            <option value="100-500">100 - 500</option>
-            <option value="500-1000">500 - 1,000</option>
-            <option value="1000-5000">1,000 - 5,000</option>
-            <option value="5000-plus">5,000+</option>
-          </select>
+            placeholder="City, State or site address"
+            {...register('location')}
+          />
         </div>
       </div>
 

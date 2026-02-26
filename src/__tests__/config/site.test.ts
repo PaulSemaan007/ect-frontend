@@ -3,28 +3,16 @@ import { siteConfig } from '@/config/site';
 
 describe('siteConfig', () => {
   it('has correct contact information', () => {
-    expect(siteConfig.contact.phone).toBe('(714) 474-4788');
-    expect(siteConfig.contact.email).toBe('info@ectsecurity.com');
+    expect(siteConfig.contact.phone).toBe('562-716-8376');
+    expect(siteConfig.contact.email).toBe('Rsemaan1@yahoo.com');
   });
 
   it('has required navigation links', () => {
-    expect(siteConfig.nav.main.length).toBeGreaterThanOrEqual(4);
+    expect(siteConfig.nav.main.length).toBeGreaterThanOrEqual(2);
 
     const navLabels = siteConfig.nav.main.map((n) => n.label);
     expect(navLabels).toContain('Home');
-    expect(navLabels).toContain('Services');
-    expect(navLabels).toContain('About');
-    expect(navLabels).toContain('Careers');
-  });
-
-  it('has all 4 active services', () => {
-    expect(siteConfig.nav.services).toHaveLength(4);
-
-    const serviceLabels = siteConfig.nav.services.map((s) => s.label);
-    expect(serviceLabels).toContain('Events & Festivals');
-    expect(serviceLabels).toContain('Venues');
-    expect(serviceLabels).toContain('Corporate');
-    expect(serviceLabels).toContain('Parking Assistance');
+    expect(navLabels).toContain('Contact');
   });
 
   it('covers California and Nevada', () => {
