@@ -6,13 +6,12 @@
 export const siteConfig = {
   name: 'ECT Security',
   title: 'ECT Security - Event Control Team',
-  description:
-    'Professional security services and event management solutions across California and Nevada',
+  description: 'Professional security services across California and Nevada',
 
   // Contact Information
   contact: {
-    email: 'info@ectsecurity.com',
-    phone: '(714) 474-4788',
+    email: 'Rsemaan1@yahoo.com',
+    phone: '562-716-8376',
   },
 
   // Social Media Links
@@ -34,15 +33,11 @@ export const siteConfig = {
     foreground: '#ededed',
   },
 
-  // Primary CTAs
+  // Primary CTA
   ctas: {
     primary: {
       label: 'Get a Quote',
       href: '/quote',
-    },
-    secondary: {
-      label: 'Apply Now',
-      href: '/careers/apply',
     },
   },
 
@@ -50,22 +45,7 @@ export const siteConfig = {
   nav: {
     main: [
       { label: 'Home', href: '/' },
-      { label: 'Services', href: '/services' },
-      { label: 'About', href: '/about' },
-      { label: 'Careers', href: '/careers' },
       { label: 'Contact', href: '/quote' },
-    ],
-    services: [
-      { label: 'Events & Festivals', href: '/services/events' },
-      { label: 'Venues', href: '/services/venues' },
-      { label: 'Corporate', href: '/services/corporate' },
-      { label: 'Parking Assistance', href: '/services/parking' },
-    ],
-    legal: [
-      { label: 'Privacy Policy', href: '/privacy' },
-      { label: 'Terms of Service', href: '/terms' },
-      { label: 'Service Area', href: '/service-area' },
-      { label: 'FAQ', href: '/faq' },
     ],
   },
 } as const;

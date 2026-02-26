@@ -46,11 +46,8 @@ describe('QuoteForm', () => {
     await user.type(screen.getByLabelText(/full name/i), 'John Smith');
     await user.type(screen.getByLabelText(/email/i), 'john@example.com');
     await user.type(screen.getByLabelText(/phone number/i), '5551234567');
-    await user.selectOptions(screen.getByLabelText(/service type/i), 'events');
-    await user.type(
-      screen.getByLabelText(/additional details/i),
-      'Need security for music festival',
-    );
+    await user.selectOptions(screen.getByLabelText(/service type/i), 'unarmed-guard');
+    await user.type(screen.getByLabelText(/additional details/i), 'Need security for my site');
 
     await user.click(screen.getByText('Request Quote'));
 
@@ -70,7 +67,7 @@ describe('QuoteForm', () => {
     await user.type(screen.getByLabelText(/full name/i), 'John Smith');
     await user.type(screen.getByLabelText(/email/i), 'john@example.com');
     await user.type(screen.getByLabelText(/phone number/i), '5551234567');
-    await user.selectOptions(screen.getByLabelText(/service type/i), 'events');
+    await user.selectOptions(screen.getByLabelText(/service type/i), 'unarmed-guard');
     await user.type(screen.getByLabelText(/additional details/i), 'Need security');
 
     await user.click(screen.getByText('Request Quote'));

@@ -8,7 +8,7 @@ import { siteConfig } from '@/config/site';
 export const metadata: Metadata = {
   title: 'Get a Free Security Quote',
   description:
-    'Request a free, custom security quote for your event, venue, or facility. ECT Security provides licensed guards across California and Nevada.',
+    'Request a free, custom security quote. ECT Security provides professional security services across California and Nevada.',
   alternates: { canonical: '/quote' },
 };
 

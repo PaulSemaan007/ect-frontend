@@ -9,7 +9,7 @@ interface HeroProps {
 export function Hero({ data }: HeroProps) {
   const { headline, subheadline, ctaLabel, ctaUrl, backgroundImage } = data;
   const heroSrc = backgroundImage?.node?.sourceUrl || '/images/hero-festival.png';
-  const heroAlt = backgroundImage?.node?.altText || 'ECT Security team at a live event';
+  const heroAlt = backgroundImage?.node?.altText || 'ECT Security';
 
   return (
     <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center justify-center overflow-hidden hero-scanlines">
@@ -22,7 +22,7 @@ export function Hero({ data }: HeroProps) {
 
       <HeroContent
         headline={headline}
-        subheadline={subheadline}
+        subheadline={subheadline ?? undefined}
         ctaLabel={ctaLabel}
         ctaUrl={ctaUrl}
       />

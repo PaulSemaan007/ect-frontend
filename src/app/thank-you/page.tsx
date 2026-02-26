@@ -71,12 +71,9 @@ export default function ThankYouPage() {
                 </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="flex justify-center mb-8">
                 <Button href="/" variant="primary">
                   Back to Home
-                </Button>
-                <Button href="/services" variant="outline">
-                  View Services
                 </Button>
               </div>
 

@@ -1,12 +1,6 @@
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 import { siteConfig } from '@/config/site';
 import { Button } from './ui';
-import { NavLinks } from './NavLinks';
-
-const MobileMenu = dynamic(() =>
-  import('./MobileMenu').then((mod) => ({ default: mod.MobileMenu })),
-);
 
 export function Header() {
   return (
@@ -21,23 +15,10 @@ export function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            <NavLinks />
-          </div>
-
-          {/* CTAs + Mobile Menu */}
-          <div className="flex items-center gap-3">
-            <Button
-              href={siteConfig.ctas.primary.href}
-              variant="primary"
-              size="sm"
-              className="hidden sm:inline-flex"
-            >
-              {siteConfig.ctas.primary.label}
-            </Button>
-            <MobileMenu />
-          </div>
+          {/* CTA */}
+          <Button href={siteConfig.ctas.primary.href} variant="primary" size="sm">
+            {siteConfig.ctas.primary.label}
+          </Button>
         </div>
       </nav>
     </header>
