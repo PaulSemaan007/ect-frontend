@@ -31,7 +31,7 @@ export function HeroContent({ headline, subheadline, ctaLabel, ctaUrl }: HeroCon
   const words = headline?.split(' ') || [];
 
   return (
-    <div className="relative z-10 max-w-5xl mx-auto px-6 pt-12 pb-16 lg:pt-16 lg:pb-20 text-center">
+    <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 lg:py-32 text-center">
       {/* Background glow */}
       <motion.div
         className="hero-glow"
