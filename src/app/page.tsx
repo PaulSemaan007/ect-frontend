@@ -28,6 +28,22 @@ export default function Home() {
       <main id="main-content">
         <Hero data={heroData} />
 
+        {/* Services Section */}
+        <section className="bg-gray-950 py-16 lg:py-20">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-10">Our Services</h2>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
+              <div className="text-xl font-semibold text-neon neon-glow-sm">
+                General Unarmed Guard Services
+              </div>
+              <span className="hidden sm:block text-gray-600">|</span>
+              <div className="text-xl font-semibold text-neon neon-glow-sm">
+                Some Special Events
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="bg-gradient-to-b from-gray-900 to-gray-950 py-16 lg:py-24">
           <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
